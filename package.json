@@ -1,0 +1,22 @@
+{
+  "name": "industryfe",
+  "version": "2.0.0",
+  "description": "Industry Web App 2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/industryapp/industryapp-FE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/industryapp/industryapp-FE/issues"
+  },
+  "homepage": "https://github.com/industryapp/industryapp-FE#readme",
+  "devDependencies": {
+    "commitizen": "^2.8.6"
+  }
+}
