@@ -17,19 +17,19 @@
   },
   "homepage": "https://github.com/industryapp/industryapp-FE#readme",
   "devDependencies": {
-    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
     "enzyme": "^2.4.1",
     "eslint": "^3.7.1"
   },
   "engines": {
-    "node":"6.7.0"
+    "node": "6.7.0"
   },
   "pre-commit": [
     "lint"
   ],
   "dependencies": {
     "algoliasearch": "^3.18.1",
-    "axios": "^0.14.0",
+    "axios": "^0.15.0",
     "babel": "^6.5.2",
     "chartjs": "^0.3.24",
     "contentful": "^3.6.4",
@@ -37,7 +37,7 @@
     "express": "^4.14.0",
     "fbjs": "^0.8.5",
     "font-awesome": "^4.6.3",
-    "fs": "0.0.1-security",
+    "fs": "0.0.2",
     "google-react-maps": "^1.0.38",
     "history": "^4.3.0",
     "is_js": "^0.9.0",
@@ -62,5 +62,10 @@
     "sass-loader": "^4.0.2",
     "superagent": "^2.3.0",
     "webpack": "^1.13.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
