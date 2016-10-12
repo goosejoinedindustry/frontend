@@ -13,7 +13,7 @@ app.get('*', (req, res) => {
   res.render('index', {head});
 });
 
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Connected to port ${PORT}`);
 });
