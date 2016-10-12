@@ -39,5 +39,5 @@ jspm_packages
 bundle.js
 .floo
 .flooignore
+server/views/npm-debug.log
 .babelrc
-.gitignore

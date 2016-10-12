@@ -42,7 +42,6 @@
   "dependencies": {
     "algoliasearch": "^3.18.1",
     "axios": "^0.15.0",
-    "babel": "^6.5.2",
     "chartjs": "^0.3.24",
     "contentful": "^3.6.4",
     "ejs": "^2.5.2",
