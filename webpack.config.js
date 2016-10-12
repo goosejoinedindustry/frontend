@@ -1,14 +1,16 @@
-// import path from 'path'
+const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   context: __dirname,
   entry: [
-    // 'webpack-dev-server/client?http://0.0.0.0:3000',
+    // 'webpack-dev-server',
+    // 'webpack-hot-middleware/client',
     // 'webpack/hot/only-dev-server',
     './client/index.js'
   ],
   output: {
+    path: path.join(__dirname, 'client', 'static', 'js'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -18,11 +20,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
-        presets: ['react', 'es2015', 'stage-2']
+        presets: ['react', 'es2015', 'stage-1']
       }
     }]
   },
-  plugins: [],
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
   },
@@ -35,5 +36,5 @@ module.exports = {
     reasons: true,
     chunks: false
   },
-  watch: true
+  // watch: true
 };
