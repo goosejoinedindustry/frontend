@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-export default TermsAndConditions extends Component {
+export default class TermsAndConditions extends Component {
     render() {
         return (
+            <div>
             <center><h1>TERMS OF SERVICE</h1></center>
             <center><p>Last Updated: March 6th 2016</p></center>
 
@@ -287,113 +288,7 @@ export default TermsAndConditions extends Component {
 
             <p>While our own staff is continually working to develop and evaluate our own product ideas and features, we pride ourselves on paying close attention to the interests, feedback, comments, and suggestions we receive from the User community.  If you choose to contribute by sending Industry Careers or our employees any ideas for products, services, features, modifications, enhancements, content, refinements, technologies, content offerings, promotions, strategies, or product/feature names, or any related documentation, artwork, computer code, diagrams, or other materials (collectively 'Feedback'), then regardless of what your communication may say, the following terms shall apply, so that future misunderstandings can be avoided.  Accordingly, by sending Feedback to Industry Careers, you agree that:  (a) Industry Careers has no obligation to review, consider, or implement your Feedback, or to return to you all or part of any Feedback for any reason; (b) Feedback is provided on a non-confidential basis, and Industry Careers is not under any obligation to keep any Feedback you send confidential or to refrain from using or disclosing it in any way; and (c) You irrevocably grant Industry Careers and its successors and assigns perpetual and unlimited permission to Use the Feedback and derivatives thereof for any purpose and without restriction, free of charge and without attribution of any kind, including, by way of example and not limitation, by making, using, selling, offering for sale, importing, and promoting commercial products and services that incorporate or embody Feedback, whether in whole or in part, and whether as provided or as modified.</p>
 
-            <!-- <h3><strong>SECTION 13: INDUSTRY INSIDER</strong></h3>-->
-
-
-            <!--<p><strong>SPONSOR</strong>: Industry Careers, Inc., 1455 Kettner Blvd Apt 1405, San Diego, CA 92101, U.S.A., hello@industry.co ('Sponsor')</p>-->
-
-            <!--<p><strong>ADMINISTRATOR</strong>: Industry Careers, Inc., 1455 Kettner Blvd Apt 1405, San Diego, CA 92101, U.S.A., hello@industry.co ('Sponsor'). The decisions of the Sponsor and/or Administrator shall be final and binding with respect to all matters related to this sweepstakes ('Sweepstakes').</p>-->
-
-
-
-            <!--<p><strong>ONLINE ENTRY</strong>: By using the Internet to visit www.industry.co (&ldquo;Industry Insider Website&rdquo;) and completing an entry form which will ask Entrant to input the Word and Entrants Address so that the Administrator or the Sponsor can confirm Sweepstakes eligibility and attempt to contact the Entrant if the Entrant is a potential Winner (&ldquo;Online Entry&rdquo;). It is Entrant&#8217;s sole responsibility to notify the Sponsor of a change in Entrant&#8217;s Address. The Word will be available through the Industry Insider Website. Normal Internet access and usage charges imposed by Entrant&#8217;s Internet service provider will apply. By entering your email address, you grant to Administrator or Sponsor your consent to send you an email should you be selected a potential Winner. Message and data charges may apply. Entry is limited to one (1) entry per person regardless of method of Entry).-->
-            <!--For the purposes of these Official Rules (&ldquo;Rules&rdquo;), all times and days are Pacific Time (&ldquo;PT&rdquo;). Administrator&#8217;s computer is the official time-keeping device for the Sweepstakes.</p>-->
-
-
-            <!--<p><strong>ELIGIBILITY</strong>: Open only to persons, who are: (i) as of the time of submission of an entry (an &ldquo;Entry&rdquo;) not minors as defined by their state/province/territory/country of primary residence (&ldquo;Minors&rdquo;); (ii) as of Entry and time of acceptance of any prize, a legal resident of, and physically located within, the 50 United States, D.C. If you are a United States resident, you are considered a Minor as follows: [a] if you are younger than 19 years of age and your state of primary residence is Nebraska or Alabama; [b] if you are younger than 21 years of age and your state of primary residence is Mississippi, and [c] if you are younger than 18 years of age and your primary residence is District of Columbia or any of the remaining states.</p>-->
-
-            <!--<p><strong>LIMITATIONS</strong>: In the event of a dispute regarding the identity of the person submitting an Entry, the Entry will be deemed to be submitted by the person in whose name and email address is registered. Entries by any method other than set forth above are void. Any use of robotic, repetitive, automated, programmed or similar play methods or agents (including, without limitation, promotion entry services) of effecting Entry is prohibited and will void all Entries by that Entrant.</p>-->
-
-            <!--<p>Neither the Entities, nor any of their officers, directors, shareholders, employees, agents or representatives (individually and collectively, 'Releasees') are responsible for: Entries from persons residing, or physically located, outside the Territory; Entries that are altered, delayed, deleted, destroyed, forged, fraudulent, improperly accessed, inaccurate, incomplete, interrupted, irregular in any way, late, lost, misrouted, multiple, non-delivered, stolen, tampered with, unauthorized, unintelligible or otherwise not in compliance with these Rules; or for lost, interrupted or unavailable network, server, internet service provider, or other connections; telephone or text messaging availability or accessibility; miscommunications; failed computer, cellular, satellite, telephone or cable transmissions, lines or technical failure; failed phone, computer hardware or software, failures, technical errors or difficulties; telephone transmissions; technical failures; unauthorized human intervention; traffic congestion; garbled or jumbled transmissions; undeliverable emails resulting from any form of active or passive email filtering; insufficient space in Entrant&#8217;s email account to receive emails; or other errors of any kind, whether due to electronic, human, mechanical, printing, production or technical errors or other causes; even if caused by the negligence of any of the Releasees. Each of such potential Entries will be disqualified. At Sponsor and/or Administrator&#8217;s sole discretion, any attempt by a person to use multiple email accounts to register more Entries than allowed by these Rules may result in disqualification.</p>-->
-
-            <!--<p><strong>CONDITIONS</strong> By entering Industry Insider and/or accepting any Prize you may win, you agree, represent and warrant that: [a] you have all rights, permissions and consents necessary to grant the rights to Sponsor as expressed herein; [b] you will abide by and be bound by the Rules, the Sponsor&#8217;s and/or Administrator&#8217;s decisions, the Privacy Policy and any applicable terms of use ('TOU'); [c] the Entry becomes solely the Sponsor&#8217;s property and will not be acknowledged or returned; [d] you release, indemnify and hold harmless the Releasees from any and all liability for claims, injuries, losses or damages of any kind, including without limitation, death and bodily injury, resulting, in whole or in part, directly or indirectly, from the awarding, delivery, acceptance, use, misuse, possession, loss or misdirection of any Prize; participation in the Industry Insider Sweepstakes or any Sweepstakes-related activity or travel or from any interaction with, or downloading of, computer Sweepstakes information; [e] by accepting any Prize, you accept the inherently dangerous nature and risk in any travel or transportation, such risk including personal injury and/or death, acknowledge that your participation in the Prize event is voluntary, and acknowledge that there are natural factors and occurrences which may impact on or affect the safety of the activities you are participating in and you assume the risk of such factors and occurrences and agree that the Releasees shall not be in any way responsible for any resulting injury and/or death; [f] you acknowledge that you are solely responsible for any actions, claims or liabilities of any of your Prize guests or any member of the Group, as applicable, related to any Sweepstakes-related activity or travel; [g] the Prize is awarded 'AS IS' and WITHOUT WARRANTY OR CONDITION OF ANY KIND, express or implied (including, without limitation, any implied warranty or condition of merchantability or fitness for a particular purpose), and the Releasees do not make any representation, warranty or guarantee, express or implied, relating to the Sweepstakes or any Prize; [h] Winner's acceptance of a Prize and the participation in the Prize of a guest of Winner constitutes the grant to Sponsor and Sponsor&#8217;s affiliates of an unconditional right to use Winner&#8217;s and names, addresses (city and state or province only), voices, likenesses, photographs, biographical and Prize information and/or statements about the Sweepstakes for any programming, publicity, advertising, promotional and other purposes throughout the universe in any and all media now known or hereafter devised, in all languages and in all versions, in perpetuity, without compensation, except where prohibited by law, and Winner and guests hereby release the Releasees from any claims or liability arising out of or with respect to such use; [i] in the event viruses, bugs, unauthorized human intervention, Acts of God, acts or regulations of any governmental or supra-national authority, war, national emergency, accident, fire, riot, strikes, lock-outs, industrial disputes, acts of terrorism or other matters beyond the Sponsor&#8217;s reasonable control, corrupt, prevent or impair the administration, security, fairness or proper play of the Sweepstakes, so that it cannot be conducted as originally planned, except where prohibited by law, Sponsor has the right, in its sole discretion, to modify the Rules or to cancel, modify, terminate or suspend the Sweepstakes; and in such event, to select Winner by such method as Sponsor in its sole discretion shall consider equitable and in the event a launch event has already commenced, to terminate the launch event [j] the Releasees are not responsible for typographical or other errors in the offer or administration of this Sweepstakes, including but not limited to: errors in the advertising, Rules and selection and announcement of the Winners and distribution of the Prizes; [k] any portion of a Prize not accepted or used by a Winner will be forfeited; [l] the Releasees are not responsible for any inability of a Winner to accept or use a Prize (or any portion thereof) for any reason, including the inability of any member of the Group being permitted entry into the U.S.; [m] the Sponsor has the right, at any time and at its sole discretion, to disqualify any individual it suspects to be doing any of the following: (i) tampering or attempting to tamper with the entry process or the operation of the Sweepstakes, the Industry Website or the Industry Insider Website; (ii) violating the Rules; (iii) violating the TOU, Privacy Policy or other terms, conditions of use and/or general rules or guidelines of any Sweepstakes property or service; (iv) acting in an unsportsmanlike or disruptive manner, or with intent to annoy, abuse, threaten or harass any other person or (v) for any other good cause as determined solely by the Sponsor; [n] Sponsor has the right to lock out an Entrant whose eligibility is in question or who has been disqualified or is otherwise ineligible to enter the Sweepstakes; [o] since any attempt by any individual to damage the Industry or Industry Insider Websites or undermine the legitimate operation of this Sweepstakes or the Industry Insider or Industry Websites is a violation of these Rules as well as criminal and civil laws, and should Sponsor believe or become aware that such an attempt has been, is being, or will be made, it has the right to seek remedies and damages from any responsible individuals to the fullest extent permitted by law, including without limitation prosecution; [p] all disputes, claims and causes of action at law or in equity (individually, &ldquo;Claim&rdquo;) arising out of or relating to this Sweepstakes, the meaning or interpretation of the Rules or any Prize awarded shall be resolved by applying the laws of California, without regard to conflict of laws provisions therein, and shall be solely and exclusively brought in the state or federal courts within San Diego, California; [q] all Claims shall be resolved individually, without resort to any form of class action; [r] all Claims, judgments and awards shall be limited to actual out-of-pocket costs incurred, but in no event include attorneys&#8217; and legal fees, and under no circumstances will any Entrant be permitted to obtain awards for, and hereby waives all rights to claim punitive, incidental, special, consequential damages and any other damages, other than for actual out-of-pocket expenses and waives all rights to have damages multiplied or otherwise increased; [s] Sponsor has the right to modify Prize award procedures at its sole discretion; [t] in the event there is a discrepancy or inconsistency between the English language version and any translated version of these Rules, unless otherwise provided by law, the English version shall prevail and govern; similarly, in the event there is a discrepancy or inconsistency between disclosures or other statements contained in any Sweepstakes promotional materials and the terms and conditions of these Rules, these Rules shall prevail and govern; [u] the Releasees are not responsible for the cancellation, postponement or unavailability of a Trip, and if such occurs, the Trip portion of the Prize may be substituted with a Prize of equal or greater value, at the sole discretion of Sponsor; [v] a Winner's acceptance of a Prize constitutes the grant of an unconditional right to Sponsor and Sponsor&#8217;s affiliates to photograph, film, or otherwise capture the fulfillment of the Prize (&ldquo;Fulfillment Film&rdquo;), and Sponsor and its affiliates shall have the unconditional right to reproduce, distribute, display, exhibit, transmit, broadcast, stream, synchronize with visual material, modify, amend, create derivative works, and otherwise use and permit others to use the Fulfillment Film throughout the universe in any and all media now known or hereafter devised, in all languages and in all versions, in perpetuity, without compensation, except where prohibited by law; [w] Sponsor&#8217;s use of the Fulfillment Film will not give rise to any claims of infringement, invasion of privacy, infringement of moral rights, defamation or claims for performance or payment of any kind, including but not limited to payment of reuse fees, residuals or license fees; [x] Sponsor shall have the right to make such changes to the Fulfillment Film and make such uses thereof as it deems necessary or desirable, including but not limited to the right to use, edit, and reproduce and/or alter said Fulfillment Film in perpetuity, in its entirety or in part, for any commercial and promotional purposes worldwide without any consultation or additional permission, or compensation, credit or attribution; [y] a Industry Insider event ticket cannot be sold, nor can any Winner charge guests for participating in a event; and [z] you are solely responsible for all fees incurred through your wireless phone service for text messages associated with participation in this Sweepstakes.</p>-->
-
-
-            <!--<p><strong>ADDITIONAL INDUSTRY INSIDER TERMS, CONDITIONS, & INFORMATION</strong></p>-->
-
-            <!--<p>A. What is Industry Insider?</p>-->
-
-
-            <!--<p>Industry Insider is a pre-launch program that begins from June 29th, 2015 on www.industry.co. When visitors referring more friends, they can earn rewards like early site access, extended membership and even Industry Careers, Inc. stock options.</p>-->
-
-
-            <!--<p>B. I&#8217;m not an Insider. How can I get in early access to Industry's next release?</p>-->
-
-            <!--<p>Enter your email to reserve your spot in line to be part of the next Industry release. You will receive periodic emails about Industry.</p>-->
-
-
-
-            <!--<p>C. Do Insiders have early access?</p>-->
-
-            <!--<p>When the next version of the platform is complete, access codes will be distributed on a rolling basis, beginning with the highest-ranking industry professionals and businesses  in early December. Whether or not you landed in the Top 100,000 Industry Professionals or Businesses by the time we finalize ranks--you will hear from us regarding your prizes. Reach us atfhello@industry.co if you have any uncertainty about your final rank and perks.</p>-->
-
-            <!--<p>D. How do I claim my rewards once I know my final standing?</p>-->
-
-            <!--<p>We will provide instructions on how to claim your membership, early access or stock option perk in the email in which we describe your final Insider standing, or shortly thereafter. </p>-->
-
-
-            <!--<p>E. Remind me, what are the Industry Insider reward levels?</p>-->
-
-            <!--<p>To move up the ranks and unlock more rewards, Industry Professionals and Businesses had only to refer friends with a unique link to www.industry.co</p>-->
-
-
-            <!--<p>F. Here is how we determined perks:</p>-->
-
-            <!--<p>Industry  Insider, and the time at which the user first signed up for the program. The more friends one referred, the higher he or she would rank, and the more perks he or she would unlock. Remember that this program is dynamic, so a industry professional or businesses rank and perks may have changed regularly as other Industry Insiders sign up their friends.<p>-->
-
-            <!--<p>Industry Professionals:</p>-->
-            <!--<ul>-->
-
-            <!--<li>Top 10,000: Those who finished in the Top 10,000 will receive and exclusive invite to an Industry launch event.</li>-->
-
-
-            <!--<li>Top 10: If you were in the running to become a Top 10 Industry Professional, you will get to participate in an exciting Industry experience where you will be given access to additional materials and tools (including some non-public info) to help boost or hold on to your ranking. And you provided feedback so you could add more value to Industry. This will include access to our marketing team, marketing assets and the pre-launch site experience. To access these rank-boosting tools, you were required to agree to a consulting agreement with Industry Careers. If you were to finish in the Top 10, you will earn 10,000 stock options to get Industry Careers, Inc. stock.</li>-->
-
-
-            <!--<li>First Place: The Insider finishing in this position was eligible to earn, on top of lifetime membership and 10,000 stock options, an additional 90,000 Industry stock options, totaling 100,000. Remember that Industry Insider rankings moved depending on how many other Insiders are successfully referring friends to the program. Again, please see the Terms of Service for more detail</li>-->
-
-            <!--</ul>-->
-
-            <!--<p>Businesses:</p>-->
-
-            <!--<ul>-->
-
-            <!--<li>Top 10,000: Those businesses that finish in the top 10,000 will receive 3 free months of the Industry premium business solutions for 1 individual venue </li>-->
-
-
-
-            <!--<li>Top 1,000- Those businesses that finish in the top 1,000 will receive 6 free months of the Industry premium business solutions for 1 individual venue.</li>-->
-
-
-            <!--<li>Top 100- Those businesses that finish in the top 100 will receive 1 free year of the Industry premium business solutions for 1 individual venue.</li>-->
-
-            <!--<li>Top 10- Those businesses that finish in the top 10 will receive 1 free year of the Industry premium business solutions for 1 individual venue.</li>-->
-
-            <!--</ul>-->
-
-            <!--<p>G. How can I connect with Industry?</p>-->
-
-            <!--<p>By signing up for Industry Insider, you gave us your email, which we'll use to keep in touch with you about the program and other Industry news. You can also reach us on Twitter, Facebook, Instagram and LinkedIn. Email hello@industry if you have interest in joining our team. For all other inquiries and requests, please contact hello@industry.co</p>-->
-
-
-
-            <!--<p>H. Who are Industry's investors?</p>-->
-
-            <!--<p>Industry is 100% self funded by the founders.</p>-->
-
-
-
-            <!--<p>I. Press inquiries?</p>-->
-
-            <!--<p>Look no further than our press kit. Email hello@industry.co with additional inquiries.</p>-->
-
-
-
-            <!--<p>J. How do I remove my email from the Industry Insider list?</p>-->
-
-            <!--<p>If you no longer wish to be a part of the program, simply email hello@industry.co with your request to be removed.</p>-->
-
-
+        
 
 
             <h3><strong>SECTION 13: TERMINATION</strong> </h3>
@@ -602,7 +497,7 @@ export default TermsAndConditions extends Component {
 
 
             <p>J. Contacting Industry Careers.  You can contact Industry Careers, Inc.,  by e-mail at <a href="mailto:hello@industry.co">hello@industry.co</a>, or by U.S. Post at Industry Careers, 1455 Kettner Blvd Apt 1405, San Diego, CA 92101.</p>
-
+            </div>
         )
     }
 }

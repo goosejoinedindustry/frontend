@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import JobTableRow from './jobTableRow.js';
+import JobTableRow from './jobTableRow';
 
-export default JobTable extends Component {
+export default class JobTable extends Component {
   render() {
     return (
         // List of Job Rows
       <JobTableRow />
-    )
+    );
   }
 }

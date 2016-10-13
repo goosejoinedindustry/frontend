@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import BackgroundItem from '../utility/backgroundItem.js';
+import BackgroundItem from '../utility/backgroundItem';
 
-export default Education extends Component {
+export default class Education extends Component {
   render() {
     return (
         // going to be a list
-        <BackgroundItem />
-    )
+      <BackgroundItem />
+    );
   }
 }

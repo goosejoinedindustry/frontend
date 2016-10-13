@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default BackgroundItem extends Component {
+export default class BackgroundItem extends Component {
   render() {
     return (
         <div />

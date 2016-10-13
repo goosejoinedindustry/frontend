@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ApplicatesTableRow from './applicatesTableRow.js';
 
-export default ApplicatesTable extends Component {
+export default class ApplicatesTable extends Component {
   render() {
     return (
         // List

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ResetButton from '../utility/resetButton.js';
 
-export default ResetPassword extends Component {
+export default class ResetPassword extends Component {
   render() {
     return (
         <div>

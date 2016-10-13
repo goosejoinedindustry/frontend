@@ -1,51 +1,47 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { reduxForm } from 'redux-form';
 import _ from 'lodash';
-
 const FIELDS = {
   email: {
     type: 'input',
     label: 'Enter your email'
   },
   password: {
-    type: 'input'
+    type: 'input',
     label: 'Enter your password'
   }
 }
-
 class LoginForm extends Component {
   // static contextTypes = {
   //   router: PropTypes.object
   // }
   onSubmit(props) {
-    this.props.createPost(props)
-      .then(() => {
-        // form has been submitted, navigate user to custom route
-        // this.context.router.push('/profilePage');
-      });
+    console.log('login form submitted');
+    // this.props.loginAction(props)
+    //   .then(() => {
+    //     // form has been submitted, navigate user to custom route
+    //     // this.context.router.push('/profilePage');
+    //   })
   }
   render() {
-    const { handleSubmit } = props;
+    const { fields: {email, password}, handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-        <div>
-          <label>First Name</label>
+      <div>
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           <div>
-            <Field name="firstName" component="input" type="text" placeholder="First Name"/>
+            <label>First Name</label>
+            <input type="text" className="form-control" {...email} />
           </div>
-        </div>
-        <div>
-          <label>Last Name</label>
           <div>
-            <Field name="lastName" component="input" type="text" placeholder="Last Name"/>
+            <label>Last Name</label>
+            <input type="text" className="form-control" {...password} />
           </div>
-        </div>
-        <div>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     )
   }
 }
-
 export default reduxForm({
   form: 'LoginForm',
   fields: _.keys(FIELDS),

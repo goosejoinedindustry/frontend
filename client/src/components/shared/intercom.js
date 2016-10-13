@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default Intercom extends Component {
+export default class Intercom extends Component {
   render() {
     return (
       <div />

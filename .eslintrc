@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+    "rules": {
+    "comma-dangle": 0,
+    "camelcase": 1,
+    "semi": 1,
+    "arrow-body-style": 1,
+    "eqeqeq": 1,
+    "curly": 1,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}

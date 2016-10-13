@@ -8,9 +8,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, '../', 'client')));
 
-const head = {company: 'Industry'};
+const head = { company: 'Industry' };
 app.get('*', (req, res) => {
-  res.render('index', {head});
+  res.render('index', { head });
 });
 
 const PORT = 3001;

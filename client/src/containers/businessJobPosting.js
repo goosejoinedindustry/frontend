@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 
-import Header from '../components/shared/header.js';
-import Footer from '../components/shared/footer.js';
+import Header from '../components/shared/header';
+import Footer from '../components/shared/footer';
 import JobListings from '../components/businessJobPosting/jobListings';
 import ApplicationTable from '../components/businessJobPosting/applicatesTable';
 
-export default Jobs extends Component {
+export default class Jobs extends Component {
   render() {
     return (
+      <div>
         <Header />
         <JobListings />
-        <ApplicatesTable />
+        <ApplicationTable />
         <Footer />
-    )
+      </div>
+    );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EditButton from '../utility/editButton.js';
 
-export default Bio extends Component {
+export default class Bio extends Component {
   render() {
     return (
       <div>

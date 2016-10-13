@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EditButton from '../utility/editButton.js';
 
-export default Summary extends Component {
+export default class Summary extends Component {
   render() {
     return (
         <div>

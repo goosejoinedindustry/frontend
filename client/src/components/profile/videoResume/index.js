@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import EditButton from '../utility/editButton.js';
 
-export default VideoResume extends Component {
+export default class VideoResume extends Component {
   render() {
     return (
         <div>

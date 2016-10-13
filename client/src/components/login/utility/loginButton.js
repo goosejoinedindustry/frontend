@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default LoginButton extends Component {
+export default class LoginButton extends Component {
   render() {
     return (
       <div />

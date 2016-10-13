@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 
-import LoginForm from '../components/login/loginForm.js';
-import FacebookLogin from '../components/login/facebookLogin.js';
-import SignupForm from '../components/signup/signupForm.js';
-import ForgotPassword from '../components/login/forgotPassword.js';
+import LoginForm from '../components/login/loginForm';
+import SignupForm from '../components/signup/signupForm';
+import FacebookLogin from '../components/login/facebookLogin';
+import ForgotPassword from '../components/login/utility/forgotPassword';
 
-export default Login extends Component {
+export default class Login extends Component {
   render() {
     return (
-      <LoginForm />
-      <SignupForm />
-      <FacebookLogin />
-      <ForgotPassword />
-    )
+      <div>
+        <LoginForm />
+        <SignupForm />
+        <FacebookLogin />
+        <ForgotPassword />
+      </div>
+    );
   }
 }

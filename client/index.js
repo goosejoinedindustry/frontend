@@ -8,6 +8,8 @@ import Reducers from './src/reducers';
 const CreateStoreWithMiddleware = applyMiddleware()(createStore);
 
 export default class MyComponent extends Component {
+
+
   render() {
     console.log('my Component from index.js - justin')
     return (

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import ProfileItem from './profileItem';
 
-export default ViewProfiles extends Component {
+export default class ViewProfiles extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return (
-        // List
-      <ProfileItem />
-    )
+    return (< ProfileItem />);
   }
 }

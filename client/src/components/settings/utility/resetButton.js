@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default ResetButton extends Component {
+export default class ResetButton extends Component {
   render() {
     return (
       <div />

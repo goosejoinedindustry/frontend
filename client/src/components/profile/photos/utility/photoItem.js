@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default PhotoItem extends Component {
+export default class PhotoItem extends Component {
   render() {
     return (
       <div />

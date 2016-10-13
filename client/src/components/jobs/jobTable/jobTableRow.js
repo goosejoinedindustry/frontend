@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ApplyNowButton from '../utility/applyNowButton.js';
 
-export default JobTableRow extends Component {
+export default class JobTableRow extends Component {
   render() {
     return (
       <div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default EditButton extends Component {
+export default class EditButton extends Component {
   render() {
     return (
       <div />

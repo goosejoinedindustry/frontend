@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default ViewButton extends Component {
+export default class ViewButton extends Component {
   render() {
     return (
       <div />

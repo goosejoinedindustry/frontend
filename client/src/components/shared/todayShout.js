@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default TodayShout extends Component {
+export default class TodayShout extends Component {
   render() {
     return (
       <div />

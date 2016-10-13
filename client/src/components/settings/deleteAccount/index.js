@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DeleteButton from '../utility/deleteButton.js';
 
-export default DeleteAccount extends Component {
+export default class DeleteAccount extends Component {
   render() {
     return (
         <div>

@@ -1,81 +1,86 @@
 {
-  "name": "industryfe",
-  "version": "2.0.0",
-  "description": "Industry Web App 2.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack && babel-node server/server.js --presets es2015,stage-1 && webpack",
-    "exp": "webpack --module-bind 'js=babel' && babel-node server/server.js --presets es2015, stage-1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/industryapp/industryapp-FE.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/industryapp/industryapp-FE/issues"
-  },
-  "homepage": "https://github.com/industryapp/industryapp-FE#readme",
-  "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-core": "^6.17.0",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-1": "^6.16.0",
-    "babel-preset-stage-2": "^6.17.0",
-    "cz-conventional-changelog": "^1.2.0",
-    "enzyme": "^2.4.1",
-    "eslint": "^3.7.1",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
-  },
-  "engines": {
-    "node": "6.7.0"
-  },
-  "pre-commit": [
-    "lint"
-  ],
-  "dependencies": {
-    "algoliasearch": "^3.18.1",
-    "axios": "^0.15.0",
-    "chartjs": "^0.3.24",
-    "contentful": "^3.6.4",
-    "ejs": "^2.5.2",
-    "express": "^4.14.0",
-    "fbjs": "^0.8.5",
-    "font-awesome": "^4.6.3",
-    "fs": "0.0.2",
-    "google-react-maps": "^1.0.38",
-    "history": "^4.3.0",
-    "is_js": "^0.9.0",
-    "lodash": "^4.16.4",
-    "material-ui": "^0.16.0",
-    "moment": "^2.15.1",
-    "normalizr": "^2.2.1",
-    "pluralize": "^3.0.0",
-    "react": "^15.3.2",
-    "react-copy-to-clipboard": "^4.2.3",
-    "react-dom": "^15.3.2",
-    "react-ga": "^2.1.2",
-    "react-helmet": "^3.1.0",
-    "react-linkify": "^0.1.3",
-    "react-redux": "^4.4.5",
-    "react-redux-toastr": "^3.8.5",
-    "react-select": "^1.0.0-rc.2",
-    "react-tap-event-plugin": "^1.0.0",
-    "react-videojs": "0.0.3",
-    "redux": "^3.6.0",
-    "redux-form": "^6.1.0",
-    "sass-loader": "^4.0.2",
-    "superagent": "^2.3.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "industryfe",
+    "version": "2.0.0",
+    "description": "Industry Web App 2.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "start": "webpack && babel-node server/server.js --presets es2015, stage-1",
+        "david": "webpack && babel-node server/server.js --presets es2015, stage-1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/industryapp/industryapp-FE.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/industryapp/industryapp-FE/issues"
+    },
+    "homepage": "https://github.com/industryapp/industryapp-FE#readme",
+    "devDependencies": {
+        "babel-cli": "^6.16.0",
+        "babel-core": "^6.17.0",
+        "babel-loader": "^6.2.5",
+        "babel-preset-es2015": "^6.16.0",
+        "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-1": "^6.16.0",
+        "babel-preset-stage-2": "^6.17.0",
+        "cz-conventional-changelog": "^1.2.0",
+        "enzyme": "^2.4.1",
+        "eslint": "^3.7.1",
+        "eslint-config-airbnb": "^12.0.0",
+        "eslint-plugin-import": "^2.0.1",
+        "eslint-plugin-jsx-a11y": "^2.2.3",
+        "eslint-plugin-react": "^6.4.1",
+        "webpack": "^1.13.2",
+        "webpack-dev-server": "^1.16.2"
+    },
+    "engines": {
+        "node": "6.7.0"
+    },
+    "pre-commit": [
+        "lint"
+    ],
+    "dependencies": {
+        "algoliasearch": "^3.18.1",
+        "axios": "^0.15.0",
+        "chartjs": "^0.3.24",
+        "contentful": "^3.6.4",
+        "ejs": "^2.5.2",
+        "express": "^4.14.0",
+        "fbjs": "^0.8.5",
+        "font-awesome": "^4.6.3",
+        "fs": "0.0.2",
+        "google-react-maps": "^1.0.38",
+        "history": "^4.3.0",
+        "is_js": "^0.9.0",
+        "lodash": "^4.16.4",
+        "material-ui": "^0.16.0",
+        "moment": "^2.15.1",
+        "normalizr": "^2.2.1",
+        "pluralize": "^3.0.0",
+        "react": "^15.3.2",
+        "react-copy-to-clipboard": "^4.2.3",
+        "react-dom": "^15.3.2",
+        "react-ga": "^2.1.2",
+        "react-helmet": "^3.1.0",
+        "react-linkify": "^0.1.3",
+        "react-redux": "^4.4.5",
+        "react-redux-toastr": "^3.8.5",
+        "react-router": "^2.8.1",
+        "react-select": "^1.0.0-rc.2",
+        "react-tap-event-plugin": "^1.0.0",
+        "react-videojs": "0.0.3",
+        "redux": "^3.6.0",
+        "redux-form": "^6.1.0",
+        "sass-loader": "^4.0.2",
+        "superagent": "^2.3.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
-  }
 }

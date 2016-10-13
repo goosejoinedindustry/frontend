@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default JobListings extends Component {
+export default class JobListings extends Component {
   render() {
     return (
       <div />

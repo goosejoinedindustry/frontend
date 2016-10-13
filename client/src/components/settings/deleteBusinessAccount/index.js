@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default DeleteBusinessAccount extends Component {
+export default class DeleteBusinessAccount extends Component {
   render() {
     return (
         <div>

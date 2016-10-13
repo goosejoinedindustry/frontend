@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-export default PrivacyPolicy extends Component {
+export default class PrivacyPolicy extends Component {
     render() {
         return (
+            <div>
             <center><h1>PRIVACY POLICY</h1>
 
             <p>Effective Date: March 6, 2016</p>
@@ -108,7 +109,7 @@ export default PrivacyPolicy extends Component {
             <a href="mailto:hello@industry.co">hello@industry.co</a>
 
 
-
+            </div>
         )
     }
 }

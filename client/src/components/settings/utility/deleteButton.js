@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default DeleteButton extends Component {
+export default class DeleteButton extends Component {
   render() {
     return (
       <div />

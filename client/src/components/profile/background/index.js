@@ -4,7 +4,7 @@ import Experience from './experience';
 import Education from './education';
 import EditButton from '../utility/editButton.js';
 
-export default Background extends Component {
+export default class Background extends Component {
   render() {
     return (
         <div>

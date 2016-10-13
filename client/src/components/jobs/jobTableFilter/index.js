@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default JobTableFilter extends Component {
+export default class JobTableFilter extends Component {
   render() {
     return (
       <div />

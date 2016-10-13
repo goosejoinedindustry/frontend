@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default PercentPie extends Component {
+export default class PercentPie extends Component {
   render() {
     return (
       <div />
