@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default ApplicatesTable extends Component {
+export default PercentPie extends Component {
   render() {
     return (
       <div />

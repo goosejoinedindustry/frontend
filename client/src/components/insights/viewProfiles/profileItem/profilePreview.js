@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default ViewStats extends Component {
+export default ProfilePreview extends Component {
   render() {
     return (
       <div />

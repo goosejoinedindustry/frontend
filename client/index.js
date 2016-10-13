@@ -18,6 +18,6 @@ export default class MyComponent extends Component {
 
 ReactDOM.render(
   <Provider store={CreateStoreWithMiddleware(Reducers)}>
-    <Router history={History}>{routes}</Router>
+    <Routes />
   </Provider>
   , document.getElementById('main'));

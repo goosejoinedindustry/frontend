@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from '../components/shared/header.js';
 import Footer from '../components/shared/footer.js';
 import TodayShout from '../components/shared/todayShout.js';
-import ApplicationTable from '../components/applications/applicationTable.js';
+import ApplicationTable from '../components/applications/applicationTable';
 
 export default Profile extends Component {
   render() {
