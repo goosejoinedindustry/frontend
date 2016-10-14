@@ -1,4 +1,4 @@
 export default (config) => {
-  const overrides = {};
+  const overrides = { };
   return () => Object.assign({}, config, overrides);
 };

@@ -4,6 +4,18 @@ import url from 'url';
 import config from '../config';
 
 export default (app) => {
+  switch (config.env) {
+    case 'local':
+      break;
+    case 'development':
+      break;
+    case 'staging':
+      break;
+    case 'production':
+      break;
+    default:
+
+  }
   // Profile's Applications
   /** Forward to Heroku API **/
   app.use('/api', proxy(`${config.api_url}`, {
