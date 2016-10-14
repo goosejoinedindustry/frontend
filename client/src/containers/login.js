@@ -8,6 +8,7 @@ import ForgotPassword from '../components/login/utility/forgotPassword';
 
 // ACTIONS
 import { loginFormAction } from '../components/login/loginAction';
+import { signupFormAction } from '../components/signup/signupAction';
 
 
 class Login extends Component {
@@ -22,14 +23,14 @@ class Login extends Component {
     //   })
   }
   loginFormSubmit(values) {
-    console.log('here are the login values', values)
     this.props.loginFormAction(values);
   }
   signInFormSubmit(values) {
-    console.log('signed up.... redirecting', values)
+    this.props.signupFormAction(values);
   }
   render() {
     console.log('base form--------', this.props.login);
+    console.log('sign up FORMasdfdasfasd', this.props.signup);
     return (
       <div>
         <LoginForm loginInfo = {this.props.login} onSubmit={this.loginFormSubmit.bind(this)}/>
@@ -44,7 +45,11 @@ class Login extends Component {
 
 function mapStateToProps(state) {
   return {
-    login: state.emailLogin
+    login: state.emailLogin,
+    signup: state.emailSignup
   }
 }
-export default connect(mapStateToProps, {loginFormAction})(Login);
+export default connect(mapStateToProps, {
+  loginFormAction,
+  signupFormAction,
+})(Login);
