@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 // COMPONENTS
 import LoginForm from '../components/login/loginForm';
 import SignupForm from '../components/signup/signupForm';
@@ -6,10 +7,10 @@ import FacebookLogin from '../components/login/facebookLogin';
 import ForgotPassword from '../components/login/utility/forgotPassword';
 
 // ACTIONS
-import loginAction from '../components/login/loginAction/index.js';
+import { loginFormAction } from '../components/login/loginAction';
 
 
-export default class Login extends Component {
+class Login extends Component {
   // static contextTypes = {
   //   router: PropTypes.object
   // }
@@ -22,15 +23,16 @@ export default class Login extends Component {
   }
   loginFormSubmit(values) {
     console.log('here are the login values', values)
-    loginAction(values);
+    this.props.loginFormAction(values);
   }
   signInFormSubmit(values) {
     console.log('signed up.... redirecting', values)
   }
   render() {
+    console.log('base form--------', this.props.login);
     return (
       <div>
-        <LoginForm onSubmit={this.loginFormSubmit.bind(this)}/>
+        <LoginForm loginInfo = {this.props.login} onSubmit={this.loginFormSubmit.bind(this)}/>
         <h1>-------------------------------</h1>
         <SignupForm onSubmit={this.signInFormSubmit.bind(this)}/>
         <FacebookLogin />
@@ -39,3 +41,10 @@ export default class Login extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    login: state.emailLogin
+  }
+}
+export default connect(mapStateToProps, {loginFormAction})(Login);

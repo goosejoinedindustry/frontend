@@ -1,4 +1,10 @@
+export const LOGIN_FORM = 'LOGIN_FORM';
 
-export default function loginAction(props) {
+
+export function loginFormAction(props) {
   console.log(props, 'in login Action');
+  return {
+    type: LOGIN_FORM,
+    payload: props
+  }
 }
