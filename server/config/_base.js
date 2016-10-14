@@ -3,7 +3,7 @@ import path from 'path';
 
 // Defaults NODE_ENV to development mode
 if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = 'development';
+  process.env.NODE_ENV = 'local';
 }
 
 const config = {
@@ -23,7 +23,7 @@ const config = {
   // ----------------------------------
   server_host : 'localhost',
   server_port : process.env.PORT || 3000,
-  api_url     : 'http://industry-api.herokuapp.com', // Production URL (replaced in the _development override)
+  api_url     : 'localhost:8080',
 
   // ----------------------------------
   // Compiler Configuration
