@@ -1,17 +1,16 @@
 import express from 'express';
 import path from 'path';
+import routes from './routes';
 
 const app = express();
 
+// Server side templating from ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
 app.use(express.static(path.join(__dirname, '../', 'client')));
 
-const head = { company: 'Industry' };
-app.get('*', (req, res) => {
-  res.render('index', { head });
-});
+// Loads routes
+routes(app);
 
 const PORT = 3001;
 app.listen(PORT, () => {
