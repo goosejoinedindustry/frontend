@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack",
-        "start": "webpack && babel-node server/server.js --presets es2015, stage-1",
-        "david": "webpack && babel-node server/server.js --presets es2015, stage-1"
+        "start": "webpack && babel-node server/server.js --presets es2015,stage-1",
+        "david": "webpack && babel-node server/server.js --presets es2015,stage-1 --watch --colors"
     },
     "repository": {
         "type": "git",

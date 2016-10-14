@@ -1,25 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import { Router, browserHistory } from 'react-router';
 
 import Routes from './routes';
+
 import Reducers from './src/reducers';
-const CreateStoreWithMiddleware = applyMiddleware()(createStore);
 
-export default class MyComponent extends Component {
-
-
-  render() {
-    console.log('my Component from index.js - justin')
-    return (
-      <div>This is my react render</div>
-    )
-  }
-}
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <Provider store={CreateStoreWithMiddleware(Reducers)}>
-    <Routes />
+  <Provider store={createStoreWithMiddleware(Reducers)}>
+    <Router history={browserHistory} routes={Routes} />
   </Provider>
   , document.getElementById('main'));
