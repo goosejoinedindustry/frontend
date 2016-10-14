@@ -13,5 +13,12 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(Reducers)}>
     <Router history={browserHistory} routes={Routes} />
+
   </Provider>
   , document.getElementById('main'));
+
+/*
+<Provider store={CreateStoreWithMiddleware(Reducers)}>
+  <Routes />
+</Provider>
+*/

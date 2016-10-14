@@ -10,6 +10,7 @@ export default class Login extends Component {
     return (
       <div>
         <LoginForm />
+        <h1>-------------------------------</h1>
         <SignupForm />
         <FacebookLogin />
         <ForgotPassword />
