@@ -1,0 +1,189 @@
+@import 'colors';
+
+.sidebar {
+  position: fixed; // As this is a sidebar!
+  z-index: 5000;
+
+  top: 0px;
+
+  left: -300px;
+  width: 300px;
+  overflow: auto;
+  padding-bottom: 40px;
+
+  // 100% of the height + some px of the body
+  height: calc(100% + 10px);
+
+  background-color: #403F3F;
+  transform: translateX(0);
+  transition: .3s ease all;
+
+  &.show {
+    transform: translateX(300px);
+  }
+}
+
+.list {
+  display: block;
+  padding:0!important;
+
+  & > div > div {
+    padding: 0!important;
+  }
+
+  & > div > div > div > div {
+    padding: 0!important;
+  }
+
+  & svg {
+    fill: rgb(194, 194, 194)!important;
+  }
+
+  .listItem {
+
+    .linkText {
+      line-height: 20px;
+    }
+
+    & > div > div {
+      padding: 0!important;
+    }
+
+    &:last-child {
+      /*border-bottom: 1px solid lighten(#403F3F, 15)!important;*/
+    }
+
+  }
+
+  .listItemSubMenu, .listItemSubMenuAdd, .listItemSecondSubMenu {
+
+    &:hover {
+      background: #737272!important;
+      color: #fff;
+    }
+
+    & > div > div {
+      padding: 0!important;
+      margin-left: 30px!important;
+    }
+  }
+
+  .listItemSubMenuAdd {
+    .linkSubText {
+      line-height: 16px;
+      padding: 16px;
+    }
+  }
+  .listItemSecondSubMenu {
+    border-top: none!important;
+
+    & > div >div {
+      margin-left: 40px!important;
+    }
+  }
+
+  .linkText, .linkSubText {
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      color: #C2C2C2;
+      font-size: 14px;
+      padding: 16px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+      &:hover {
+        text-decoration: none!important;
+        background: #737272;
+        color: #fff;
+
+      }
+      &.active {
+        background-color: lighten(#403F3F, 20);
+        color: white;
+      }
+  }
+
+  .linkSubText {
+    padding: 9px;
+    &:hover {
+      text-decoration: none!important;
+      background: transparent!important;
+    }
+  }
+}
+
+.translations {
+  display: block;
+  position: relative;
+}
+
+.flagBtn {
+
+  .languageEnglish {
+    background-image: url('./styles/img/flags/United-States.png');
+    height: 32px;
+    width: 32px;
+  }
+
+  .languageSpanish {
+    background-image: url('./styles/img/flags/Spain.png');
+    height: 32px;
+    width: 32px;
+  }
+
+  .languageFrench {
+    background-image: url('./styles/img/flags/France.png');
+    height: 32px;
+    width: 32px;
+  }
+
+  .languagePortuguese {
+    background-image: url('./styles/img/flags/Portugal.png');
+    height: 32px;
+    width: 32px;
+  }
+
+  .languageJapanese {
+    background-image: url('./styles/img/flags/Japan.png');
+    height: 32px;
+    width: 32px;
+  }
+
+  .languageChinese {
+    background-image: url('./styles/img/flags/China.png');
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.profileBlock {
+  padding: 5% 0 0 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+}
+
+.profileImage {
+  width: 130px;
+  height: 130px;
+  border-radius: 65px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: white;
+}
+
+.menuIcon {
+  padding-right: 23px;
+}

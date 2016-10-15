@@ -9,6 +9,7 @@
     "curly": 1,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-param-reassign": ["error", { "props": false }],
-    "import/no-dynamic-require": 0
+    "import/no-dynamic-require": 0,
+     "max-len": ["warn", 100]
   }
 }

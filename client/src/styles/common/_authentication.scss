@@ -1,0 +1,171 @@
+@import 'components';
+@import './common/colors';
+
+.logo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 10px 0 30px 0;
+  img {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.container {
+  padding: 28px;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+  background: rgba(255,255,255, 1);
+  margin: auto;
+  background-image:url('styles/img/background-auth.png');
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+
+  /** Checkbox spacing **/
+  input[type="checkbox"] {
+    margin-right: 4px
+  }
+
+  /** "OR" style **/
+  h3 {
+    text-align: center;
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 20px 20px 0;
+    padding-top: 15px;
+  }
+
+  form {
+    width: 388px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+
+    /** Center I accept the terms and conditions */
+    & > span {
+      display: flex;
+      justify-content: center;
+
+      u {
+        margin-left: 5px;
+      }
+
+      color: black;
+    }
+
+    /** Remember me / forget password **/
+    & > section {
+      display: flex;
+      justify-content: center;
+
+      color: black;
+    }
+
+    h2 {
+      font-weight: 200;
+      color: #F5A623;
+      margin: 0 0 30px;
+    }
+
+    /** Links to another routes **/
+    a {
+      width: 100%;
+      text-align: right;
+      -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+      color: #aaa;
+      text-decoration: underline;
+      cursor: pointer;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end
+    }
+
+    span {
+      color: #aaa;
+    }
+    /** Auth button **/
+    button {
+      align-self: center;
+    }
+  }
+}
+
+.messaging {
+    width: 269px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+    h2,h4 {
+      font-weight: 200;
+    }
+
+    p,i {
+      text-align: center;
+      font-weight: 200;
+    }
+}
+
+.auth_btns {
+    margin-top: 34px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    height: 421px;
+    max-height: 421px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-image:url('styles/img/background-auth-mobile.png');
+    height: auto;
+    margin: 0;
+
+    input {
+      color: white !important;
+    }
+
+    label {
+      color: white !important;
+    }
+
+    form {
+      width: 100%;
+
+      h2 {
+        margin: 0;
+      }
+
+      h3,a {
+        color: white ;
+      }
+
+    }
+  }
+  .questions {
+    display: none;
+  }
+  .messaging {
+    width: 100%;
+    img {
+      margin-bottom: 16px !important;
+    }
+    q {
+      display: none;
+    }
+  }
+
+  
+}

@@ -23,7 +23,7 @@ const config = {
   // ----------------------------------
   server_host : 'localhost',
   server_port : process.env.PORT || 3000,
-  api_url     : 'localhost:8080',
+  api_url     : 'localhost:1337',
 
   // ----------------------------------
   // Compiler Configuration

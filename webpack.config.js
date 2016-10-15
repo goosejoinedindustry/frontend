@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   context: __dirname,
@@ -21,7 +21,15 @@ module.exports = {
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    }]
+    },
+    {
+      test: /\.scss$/,
+      loaders: ['style', 'css', 'sass']
+    },
+    {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
+    }],
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
@@ -34,6 +42,6 @@ module.exports = {
     color: true,
     reasons: true,
     chunks: false
-  },
+  }
   // watch: true
 };

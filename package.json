@@ -34,6 +34,8 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
+    "node-sass": "^3.10.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   },
@@ -52,6 +54,7 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-http-proxy": "^0.10.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "fbjs": "^0.8.5",
     "font-awesome": "^4.6.3",
     "fs": "0.0.2",
@@ -78,7 +81,8 @@
     "redux": "^3.6.0",
     "redux-form": "^6.1.0",
     "sass-loader": "^4.0.2",
-    "superagent": "^2.3.0"
+    "superagent": "^2.3.0",
+    "webpack": "^1.13.2"
   },
   "config": {
     "commitizen": {
