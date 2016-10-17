@@ -3,8 +3,8 @@ const TWITTER_HANDLE = '@theindustry';
 export default (render) => {
   // Home Page for login and signup
   render('/', {
-    title: 'Industry',
-    ogTags: [
+    title  : 'Industry',
+    ogTags : [
         { key: 'title', tag: 'Industry' },
         { key: 'description', tag: 'Industry is a professional network and hiring solution exclusively for the service and hospitality industry. We make it easy to discover great jobs and recruit top talent. Sign up today.' },
         { key: 'url', tag: 'https://www.industry.co/' },

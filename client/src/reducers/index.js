@@ -6,10 +6,10 @@ import signupFormReducer from '../components/signup/signupReducer';
 import jobsReducer from '../components/jobs/jobsReducer';
 
 const rootReducer = combineReducers({
-  form: formReducer,
-  emailLogin: loginFormReducer,
-  emailSignup: signupFormReducer,
-  jobsListing: jobsReducer
+  form        : formReducer,
+  emailLogin  : loginFormReducer,
+  emailSignup : signupFormReducer,
+  jobsListing : jobsReducer
 });
 
 export default rootReducer;

@@ -1,11 +1,10 @@
-/* eslint key-spacing:0 spaced-comment:0 */
 import path from 'path';
 import dotenv from 'dotenv';
 
 // Loads config from .env file
 dotenv.load();
 const config = {
-  env : process.env.NODE_ENV,
+  env: process.env.NODE_ENV,
 
   // ----------------------------------
   // Project Structure
@@ -35,14 +34,14 @@ const config = {
   compiler_public_path     : '/',
   enable_babel_polyfill    : false,
   compiler_stats           : {
-    chunks : false,
+    chunks       : false,
     chunkModules : false,
-    colors : true
+    colors       : true
   }
 
 };
 
-/************************************************
+/** **********************************************
 -------------------------------------------------
 All Internal Configuration Below
 Edit at Your Own Risk
@@ -54,7 +53,7 @@ Edit at Your Own Risk
 // Environment
 // ------------------------------------
 config.globals = {
-  'process.env'  : {
+  'process.env': {
     NODE_ENV                : config.env,
     AUTH0_CLIENT_ID         : JSON.stringify(process.env.AUTH0_CLIENT_ID),
     AUTH0_CLIENT_DOMAIN     : JSON.stringify(process.env.AUTH0_CLIENT_DOMAIN),
@@ -70,11 +69,11 @@ config.globals = {
     ALGOLIA_APP_ID          : JSON.stringify(process.env.ALGOLIA_APP_ID),
     ALGOLIA_SEARCH_KEY      : JSON.stringify(process.env.ALGOLIA_SEARCH_KEY)
   },
-  NODE_ENV             : config.env,
-  __LOCAL_             : config.env === 'local',
-  __DEV__              : config.env === 'development',
-  __PROD__             : config.env === 'production',
-  __PLAYGROUND__       : config.env === 'playground'
+  NODE_ENV       : config.env,
+  __LOCAL_       : config.env === 'local',
+  __DEV__        : config.env === 'development',
+  __PROD__       : config.env === 'production',
+  __PLAYGROUND__ : config.env === 'playground'
 };
 
 export default config;

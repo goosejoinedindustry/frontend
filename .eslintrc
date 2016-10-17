@@ -13,7 +13,16 @@
       "max-len": 0,
       "react/prefer-stateless-function": ["warn", { "ignorePureComponents": false }],
       "react/prop-types": 0,
-      "react/jsx-no-bind": 0,
+      "react/jsx-no-bind" :0,
+      "key-spacing": ["error",
+        {
+          "align": {
+            "beforeColon": true,
+            "afterColon": true,
+            "on": "colon"
+          }
+        }
+      ]
     },
     "plugins":[
       "json",

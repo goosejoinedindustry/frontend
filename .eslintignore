@@ -1,2 +1,3 @@
 node.modules/*
 client/static/js/bundle.js
+npm-debug.log

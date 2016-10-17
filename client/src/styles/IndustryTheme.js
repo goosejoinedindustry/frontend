@@ -7,27 +7,27 @@ export const GREY_COLOR = '#f2f2f2';
 
 export default {
   raisedButton: {
-    primaryColor: PRIMARY_COLOR,
-    primaryTextColor: TERTIARY_COLOR,
-    secondaryColor: TERTIARY_COLOR,
-    secondaryTextColor: PRIMARY_COLOR
+    primaryColor       : PRIMARY_COLOR,
+    primaryTextColor   : TERTIARY_COLOR,
+    secondaryColor     : TERTIARY_COLOR,
+    secondaryTextColor : PRIMARY_COLOR
   },
   flatButton: {
-    primaryColor: PRIMARY_COLOR,
-    primaryTextColor: TERTIARY_COLOR,
-    secondaryColor: TERTIARY_COLOR,
-    secondaryTextColor: PRIMARY_COLOR
+    primaryColor       : PRIMARY_COLOR,
+    primaryTextColor   : TERTIARY_COLOR,
+    secondaryColor     : TERTIARY_COLOR,
+    secondaryTextColor : PRIMARY_COLOR
   },
   textField: {
-    focusColor: PRIMARY_COLOR,
-    textColor: SECONDARY_COLOR
+    focusColor : PRIMARY_COLOR,
+    textColor  : SECONDARY_COLOR
   },
   paper: {
     backgroundColor: 'transparent'
   },
   tableRow: {
-    selectedColor: PRIMARY_COLOR_OPAQUE,
-    stripeColor: GREY_COLOR
+    selectedColor : PRIMARY_COLOR_OPAQUE,
+    stripeColor   : GREY_COLOR
   },
   menuItem: { // Please note that this is kind of useless due to Material-UI changes.
     hoverColor: PRIMARY_COLOR_OPAQUE

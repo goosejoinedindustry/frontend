@@ -45,8 +45,8 @@ class Login extends Component {
 
 function mapStateToProps(state) {
   return {
-    login: state.emailLogin,
-    signup: state.emailSignup
+    login  : state.emailLogin,
+    signup : state.emailSignup
   };
 }
 export default connect(mapStateToProps, {
