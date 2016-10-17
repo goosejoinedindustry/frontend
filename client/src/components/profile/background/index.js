@@ -17,7 +17,7 @@ const fakeExperience = [
     expStart: 'Jun 2011', // date format
     expEnd: 'Sep 2013' // date format
   },
-]
+];
 const fakeEducation = [
   {
     eduTitle: 'Sociology',
@@ -33,17 +33,17 @@ const fakeEducation = [
     eduStart: 'Aug 2011', // date format
     eduEnd: 'June 2013' // date format
   },
-]
+];
 
 export default class Background extends Component {
   render() {
     return (
-        <div>
-            <EditButton />
-            <Experience exp={fakeExperience}/>
+      <div>
+        <EditButton />
+        <Experience exp={fakeExperience} />
             ---------
-            <Education edu={fakeEducation}/>
-        </div>
-    )
+        <Education edu={fakeEducation} />
+      </div>
+    );
   }
 }

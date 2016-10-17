@@ -15,13 +15,13 @@ class Login extends Component {
   // static contextTypes = {
   //   router: PropTypes.object
   // }
-  redirect() {
-    // this.props.loginAction(props)
-    //   .then(() => {
-    //     // form has been submitted, navigate user to custom route
-    //     // this.context.router.push('/profilePage');
-    //   })
-  }
+  // redirect() {
+  //   // this.props.loginAction(props)
+  //   //   .then(() => {
+  //   //     // form has been submitted, navigate user to custom route
+  //   //     // this.context.router.push('/profilePage');
+  //   //   })
+  // }
   loginFormSubmit(values) {
     this.props.loginFormAction(values);
   }
