@@ -33,9 +33,9 @@ class Login extends Component {
     console.log('sign up FORMasdfdasfasd', this.props.signup);
     return (
       <div>
-        <LoginForm loginInfo = {this.props.login} onSubmit={this.loginFormSubmit.bind(this)}/>
+        <LoginForm loginInfo={this.props.login} onSubmit={this.loginFormSubmit.bind(this)} />
         <h1>-------------------------------</h1>
-        <SignupForm onSubmit={this.signInFormSubmit.bind(this)}/>
+        <SignupForm onSubmit={this.signInFormSubmit.bind(this)} />
         <FacebookLogin />
         <ForgotPassword />
       </div>
@@ -47,7 +47,7 @@ function mapStateToProps(state) {
   return {
     login: state.emailLogin,
     signup: state.emailSignup
-  }
+  };
 }
 export default connect(mapStateToProps, {
   loginFormAction,

@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import BackgroundItem from '../utility/backgroundItem';
+// import BackgroundItem from '../utility/backgroundItem';
 
 export default class Experience extends Component {
   renderExpItems() {
     return (
       <ul>
         Experience
-        {_.map(this.props.exp, (result) => {
-          return ([
-            <li>
+        if (this.props.exp) {
+          {_.map(this.props.exp, (result) => {
+            return ([
+              <li>
               <h3>{result.expTitle}</h3>
               <div>
-                <p>{result.expLocation}</p>
-                <p>{result.expStart} - {result.expEnd}</p>
+              <p>{result.expLocation}</p>
+              <p>{result.expStart} - {result.expEnd}</p>
               </div>
-            </li>
-          ])
-        })}
+              </li>
+            ]);
+          })}
+        } else {
+          return <div></div>
+        }
       </ul>
-    )
+    );
   }
   render() {
     console.log(this.props.exp, 'eduuuu');

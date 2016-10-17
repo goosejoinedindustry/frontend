@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 
 // Loads config from .env file
 dotenv.load();
-
 const config = {
   env : process.env.NODE_ENV,
 
