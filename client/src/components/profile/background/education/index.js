@@ -9,12 +9,13 @@ export default class Education extends Component {
         Education
         {_.map(this.props.edu, (result) => {
           return ([
-            <BackgroundItem
-            title={result.eduTitle}
-            location={result.eduLocation}
-            start={result.eduStart}
-            end={result.eduEnd}
-            />
+            <li>
+              <h3>{result.eduTitle}</h3>
+              <div>
+                <p>{result.eduLocation}</p>
+                <p>{result.eduStart} - {result.eduEnd}</p>
+              </div>
+            </li>
           ])
         })}
       </ul>

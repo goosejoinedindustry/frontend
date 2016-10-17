@@ -38,12 +38,12 @@ const fakeEducation = [
 export default class Background extends Component {
   render() {
     return (
-      <div>
-          Text
-          <EditButton />
-          <Experience exp={fakeExperience}/>
-          <Education edu={fakeEducation}/>
-      </div>
+        <div>
+            <EditButton />
+            <Experience exp={fakeExperience}/>
+            ---------
+            <Education edu={fakeEducation}/>
+        </div>
     )
   }
 }

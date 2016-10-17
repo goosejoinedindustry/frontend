@@ -9,12 +9,13 @@ export default class Experience extends Component {
         Experience
         {_.map(this.props.exp, (result) => {
           return ([
-            <BackgroundItem
-            title={result.expTitle}
-            location={result.expLocation}
-            start={result.expStart}
-            end={result.expEnd}
-            />
+            <li>
+              <h3>{result.expTitle}</h3>
+              <div>
+                <p>{result.expLocation}</p>
+                <p>{result.expStart} - {result.expEnd}</p>
+              </div>
+            </li>
           ])
         })}
       </ul>
