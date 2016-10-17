@@ -4,6 +4,6 @@ export default class FacebookLogin extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

@@ -4,6 +4,6 @@ export default class ViewButton extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

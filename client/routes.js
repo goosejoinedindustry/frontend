@@ -1,10 +1,10 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router';
 
 
-import applications from './src/containers/applications';
-import businessJobPosting from './src/containers/businessJobPosting';
+// import applications from './src/containers/applications';
+// import businessJobPosting from './src/containers/businessJobPosting';
 import insights from './src/containers/insights';
 import jobs from './src/containers/jobs';
 import login from './src/containers/login';

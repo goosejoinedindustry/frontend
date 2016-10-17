@@ -7,6 +7,6 @@ export default class ApplicationTable extends Component {
     return (
         // List
       <ApplicationTableRow />
-    )
+    );
   }
 }

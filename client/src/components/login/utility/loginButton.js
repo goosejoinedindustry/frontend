@@ -4,6 +4,6 @@ export default class LoginButton extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

@@ -4,6 +4,6 @@ export default class EditButton extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

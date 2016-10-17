@@ -6,14 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "lint": "eslint *",
     "start": "webpack && babel-node server/server.js --presets es2015,stage-1",
-    "david": "webpack && babel-node server/server.js --presets es2015,stage-1 --watch --colors"
+    "david": "webpack && babel-node server/server.js --presets es2015,stage-1 --watch --colors",
+    "validate": "npm ls"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/industryapp/industryapp-FE.git"
   },
-  "author": "",
+  "author": "Industry",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/industryapp/industryapp-FE/issues"
@@ -28,29 +30,28 @@
     "babel-preset-stage-1": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
     "cz-conventional-changelog": "^1.2.0",
-    "enzyme": "^2.4.1",
-    "eslint": "^3.7.1",
+    "enzyme": "^2.5.1",
+    "eslint": "^3.8.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-markdown": "^1.0.0-beta.2",
     "eslint-plugin-react": "^6.4.1",
     "node-sass": "^3.10.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.2",
+    "precommit-hook": "^3.0.0",
     "webpack-dev-server": "^1.16.2"
   },
   "engines": {
     "node": "6.7.0"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "algoliasearch": "^3.18.1",
-    "axios": "^0.15.0",
+    "axios": "^0.15.1",
     "chartjs": "^0.3.24",
     "connect-history-api-fallback": "^1.3.0",
     "contentful": "^3.6.4",
+    "dotenv": "^2.0.0",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-http-proxy": "^0.10.0",
@@ -79,7 +80,7 @@
     "react-tap-event-plugin": "^1.0.0",
     "react-videojs": "0.0.3",
     "redux": "^3.6.0",
-    "redux-form": "^6.1.0",
+    "redux-form": "^6.1.1",
     "sass-loader": "^4.0.2",
     "superagent": "^2.3.0",
     "webpack": "^1.13.2"
@@ -88,5 +89,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }

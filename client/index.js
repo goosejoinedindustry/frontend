@@ -15,7 +15,9 @@ ReactDOM.render(
     <Router history={browserHistory} routes={Routes} />
 
   </Provider>
+  /* eslint-disable */
   , document.getElementById('main'));
+  /* eslint-enable */
 
 /*
 <Provider store={CreateStoreWithMiddleware(Reducers)}>

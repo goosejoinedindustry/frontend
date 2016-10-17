@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EditButton from '../utility/editButton.js';
+import EditButton from '../utility/editButton';
 
 export default class Bio extends Component {
   render() {
@@ -7,6 +7,6 @@ export default class Bio extends Component {
       <div>
         <EditButton />
       </div>
-    )
+    );
   }
 }

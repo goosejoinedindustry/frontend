@@ -4,6 +4,6 @@ export default class CountPie extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

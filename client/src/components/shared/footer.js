@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 require('./scss/footer.scss');
 
-export class Footer extends React.Component {
+export default class Footer extends React.Component {
 
   render() {
     const blogURL = 'http://blog.industry.co/';
@@ -24,5 +24,3 @@ export class Footer extends React.Component {
     );
   }
 }
-
-export default Footer;

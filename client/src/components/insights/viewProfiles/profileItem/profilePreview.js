@@ -4,6 +4,6 @@ export default class ProfilePreview extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

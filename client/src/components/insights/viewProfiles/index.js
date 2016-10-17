@@ -3,10 +3,6 @@ import ProfileItem from './profileItem';
 
 export default class ViewProfiles extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (< ProfileItem />);
   }

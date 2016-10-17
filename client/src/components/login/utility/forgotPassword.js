@@ -4,6 +4,6 @@ export default class ForgotPassword extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }

@@ -5,5 +5,5 @@ export function loginFormAction(props) {
   return {
     type: LOGIN_FORM,
     payload: props
-  }
+  };
 }

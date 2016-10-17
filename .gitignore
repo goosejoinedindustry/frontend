@@ -36,8 +36,16 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# webapck / babel 
 bundle.js
+.babelrc
+
+# Files sharing
 .floo
 .flooignore
+
+# Node Debug Logs
 server/views/npm-debug.log
-.babelrc
+
+# enviornment setup
+.env

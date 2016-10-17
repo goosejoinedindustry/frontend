@@ -4,6 +4,6 @@ export default class BusinessSelector extends Component {
   render() {
     return (
       <div />
-    )
+    );
   }
 }
