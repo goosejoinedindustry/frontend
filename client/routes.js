@@ -31,7 +31,7 @@ export default [
     /* Reset Password */
   <Route path="/login/identify" component={login} />,
     /* User/Business Profile Pages (Public & Unique) */
-  <Route path="/{username}" component={profile} />,
+  <Route path="/profile" component={profile} />,
     /* Jobs (Public) */
   <Route path="/jobs" component={jobs} />,
   <Route path="/jobs/{listingid}" component={jobs} />,
