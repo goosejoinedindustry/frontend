@@ -2,13 +2,13 @@
   "name": "industryfe",
   "version": "2.0.0",
   "description": "Industry Web App 2.0",
-  "main": "index.js",
+  "main": "/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "lint": "eslint * --fix",
-    "start": "webpack && babel-node server/server.js --presets es2015,stage-1",
-    "david": "webpack && babel-node server/server.js --presets es2015,stage-1 --watch --colors",
+
+    "lint": "eslint *",
+    "start": "babel-node server/server",
     "validate": "npm ls"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
@@ -33,6 +34,7 @@
     "enzyme": "^2.5.1",
     "eslint": "^3.8.1",
     "eslint-config-airbnb": "^12.0.0",
+    "eslint-loader": "^1.5.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
@@ -40,10 +42,21 @@
     "eslint-plugin-react": "^6.4.1",
     "node-sass": "^3.10.1",
     "precommit-hook": "^3.0.0",
-    "webpack-dev-server": "^1.16.2"
+    "style-loader": "^0.13.1",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
   },
   "engines": {
     "node": "6.9.0"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
   },
   "dependencies": {
     "algoliasearch": "^3.18.1",
@@ -60,6 +73,7 @@
     "fs": "0.0.2",
     "google-react-maps": "^1.0.38",
     "history": "^4.3.0",
+    "http-proxy": "^1.15.1",
     "is_js": "^0.9.0",
     "lodash": "^4.16.4",
     "material-ui": "^0.16.1",
@@ -90,8 +104,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "pre-commit": [
-    "lint"
-  ]
+  }
 }
