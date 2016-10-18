@@ -15,10 +15,10 @@ export default class Profile extends Component {
     return (
       <div>
         <Header />
-        <Summary />
+        <Bio />
         <SocialSideBar />
         <Background />
-        <Bio />
+        <Summary />
         <Photos />
         <VideoResume />
         <Intercom />
