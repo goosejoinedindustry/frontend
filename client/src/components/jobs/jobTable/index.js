@@ -3,7 +3,8 @@ import { map } from 'lodash';
 import JobTableRow from './jobTableRow';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 const data = [
   {
     id: 1,
@@ -27,38 +28,39 @@ const data = [
   }
 ]
 export default class JobTable extends Component {
-  renderTableData() {
-    return (
-      <div>
-        <MuiThemeProvider>
-          <Table>
-            <TableHeader
-              displayRowCheckbox={false}>
-              <TableRow>
-                <TableHeaderColumn>Posted</TableHeaderColumn>
-                <TableHeaderColumn>Photo</TableHeaderColumn>
-                <TableHeaderColumn>Business</TableHeaderColumn>
-                <TableHeaderColumn>Position</TableHeaderColumn>
-                <TableHeaderColumn>Job Type</TableHeaderColumn>
-                <TableHeaderColumn>Location</TableHeaderColumn>
-              </TableRow>
-            </TableHeader>
-            <TableBody
-              displayRowCheckbox={false}>
-              {map(data, (result) => {
-                return <JobTableRow key={result.id} job={result}/>
-              })}
-            </TableBody>
-          </Table>
-        </MuiThemeProvider>
-
-      </div>
-    )
+  componentWillMount() {
+    this.props.getJobs();
   }
   render() {
+    if (!this.props.data) {
+      return <div></div>
+    }
     return (
-        // List of Job Rows
-      this.renderTableData()
+      <MuiThemeProvider>
+        <Table selectable={true}>
+          <TableHeader
+            displaySelectAll={false}
+            displayRowCheckbox={false}
+            adjustForCheckbox={false}>
+            <TableRow>
+              <TableHeaderColumn>Posted</TableHeaderColumn>
+              <TableHeaderColumn>Photo</TableHeaderColumn>
+              <TableHeaderColumn>Business</TableHeaderColumn>
+              <TableHeaderColumn>Position</TableHeaderColumn>
+              <TableHeaderColumn>Job Type</TableHeaderColumn>
+              <TableHeaderColumn>Location</TableHeaderColumn>
+              <TableHeaderColumn></TableHeaderColumn>
+              <TableHeaderColumn></TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            // render each row
+            {map(this.props.data.jobsList, (result) => {
+              return <JobTableRow key={result.id} job={result}/>
+            })}
+          </TableBody>
+        </Table>
+      </MuiThemeProvider>
     );
   }
 }
