@@ -1,4 +1,4 @@
-const Webpack = require('webpack');
+const webpack = require('webpack');
 const path = require('path');
 
 const PATHS = {
@@ -7,7 +7,7 @@ const PATHS = {
 };
 
 module.exports = {
-  devtools : 'eval-source-map',
+  devtools : '#eval-source-map',
   entry    : [
     'webpack-hot-middleware/client?reload=true',
     PATHS.entry

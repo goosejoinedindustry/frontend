@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-
     "lint": "eslint *",
     "start": "babel-node server/server",
     "validate": "npm ls"
@@ -52,12 +51,6 @@
   "pre-commit": [
     "lint"
   ],
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    }
-  },
   "dependencies": {
     "algoliasearch": "^3.18.1",
     "axios": "^0.15.1",
@@ -73,7 +66,6 @@
     "fs": "0.0.2",
     "google-react-maps": "^1.0.38",
     "history": "^4.3.0",
-    "http-proxy": "^1.15.1",
     "is_js": "^0.9.0",
     "lodash": "^4.16.4",
     "material-ui": "^0.16.1",
