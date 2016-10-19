@@ -1,10 +1,9 @@
-import login from './login';
 import profile from './profile';
 import insights from './insights';
 import applications from './applications';
 import jobs from './jobs';
 import settings from './settings';
-import policies from './policies';
+import licenses from './licenses';
 import businessJobPosting from './businessJobPosting';
 import base from './base';
 import api from './api';
@@ -39,13 +38,12 @@ export default (app) => {
     renderHelper(app, route, params, template);
   }
   base(render);
-  login(render);
   profile(render);
   insights(render);
   applications(render);
   jobs(render);
   settings(render);
-  policies(render);
+  licenses(render);
   businessJobPosting(render);
   api(app);
 };

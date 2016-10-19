@@ -1,7 +1,7 @@
 const TWITTER_HANDLE = '@theindustry';
 
 export default (render) => {
-  // Home Page for login and signup
+  // Login/Signup--User Profile (Editable)w
   render('/', {
     title  : 'Industry',
     ogTags : [
@@ -24,8 +24,14 @@ export default (render) => {
     ]
   });
 
-  // Launch page for business customers
+  // User Landing Page
+  render('/user');
+
+  // Landing page for business customers
   render('/business', {
     title: 'Industry Business'
   });
+
+  // Help Page
+  render('/help');
 };

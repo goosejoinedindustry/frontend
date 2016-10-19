@@ -1,14 +1,10 @@
 export default (render) => {
-   // Cookie Agreement
-  render('/policies/cookies', {
-    title: 'Industry | Cookies'
-  });
   // Terms and Condintions Agreement
-  render('/policies/terms', {
+  render('/licenses/privacy', {
     title: 'Industry | Terms & Condintions'
   });
   // Data Agreement
-  render('/policies/data', {
+  render('/licenses/terms', {
     title: 'Industry | Data'
   });
 };

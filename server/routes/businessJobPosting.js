@@ -1,4 +1,6 @@
 export default (render) => {
-  // Business' Job Listings
-  render('/:username/listings');
+  // Business Listing
+  render('/:businessName/listings');
+  // Business Billing
+  render('/:businessName/billing');
 };

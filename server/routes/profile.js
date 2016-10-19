@@ -1,4 +1,4 @@
 export default (render) => {
-  // Profile
-  render('/:username');
+  // User Profile (Public) / Business Profile(Public/Editable)
+  render('/:profileName');
 };

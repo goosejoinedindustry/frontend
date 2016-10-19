@@ -3,8 +3,8 @@ import React from 'react';
 import { Route } from 'react-router';
 
 
-// import applications from './src/containers/applications';
-// import businessJobPosting from './src/containers/businessJobPosting';
+import applications from './src/containers/applications';
+import businessJobPosting from './src/containers/businessJobPosting';
 import insights from './src/containers/insights';
 import jobs from './src/containers/jobs';
 import login from './src/containers/login';
@@ -13,34 +13,36 @@ import profile from './src/containers/profile';
 import settings from './src/containers/settings';
 
 export default [
-    /* Landing Pages */
-  <Route path="/business" component={login} />,
-    /* landing page */
-    /* Policies */
-  <Route path="/policies/cookies" component={policies} />,
-  <Route path="/policies/terms" component={policies} />,
-  <Route path="/policies/data" component={policies} />,
     /* Signup */
   <Route path="/" component={login} />,
-    /* user signup */
-  <Route path="/business/signup" component={login} />,
-    /* business signup */
-    /* Login */
-  <Route path="/login" component={login} />,
-    /* login */
-    /* Reset Password */
-  <Route path="/login/identify" component={login} />,
-    /* User/Business Profile Pages (Public & Unique) */
-  <Route path="/profile" component={profile} />,
-    /* Jobs (Public) */
+
+  /* Landing Pages */
+  <Route path="/user" component={login} />,
+  <Route path="/business" component={login} />,
+
+  /* Licenses */
+  <Route path="/licenses/privacy" component={policies} />,
+  <Route path="/licenses/terms" component={policies} />,
+
+  /* Jobs (Public) */
   <Route path="/jobs" component={jobs} />,
-  <Route path="/jobs/{listingid}" component={jobs} />,
-    /* Settings */
+  <Route path="/jobs/:listingid" component={jobs} />,
+
+  /* Settings */
   <Route path="/settings" component={settings} />,
-    /* User Insights */
+
+  /* User Insights */
   <Route path="/insights" component={insights} />,
-    /* Business Insights */
-  <Route path="/{username}/insights" component={insights} />,
-    /* Business Settings */
-  <Route path="/{username}/settings" component={settings} />
+
+  /* User applications */
+  <Route path="/applications" component={applications} />,
+
+  /* User/Business Profile Pages (Public & Unique) */
+  <Route path="/:profileName" component={profile} />,
+
+  /* Business Job Listings */
+  <Route path="/:businessName/listings" component={businessJobPosting} />,
+
+  /* Business Billing Page */
+  <Route path="/:businessName/billing" component={profile} />,
 ];
