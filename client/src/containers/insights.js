@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
 import ViewGraph from '../components/insights/viewGraph';
-import ViewStats from '../components/insights/viewStats';
 import ViewProfiles from '../components/insights/viewProfiles';
-
+import PieChart from '../components/insights/pieChart';
 
 // ACTIONS
 import { viewGraphData } from '../components/insights/insightAction';
@@ -15,19 +14,37 @@ class Insights extends Component {
 
 
   componentWillMount() {
-    console.log('mounting');
     this.props.viewGraphData();
   }
 
   render() {
     if (this.props.viewData.statsData) {
       return (
-        <div>
-          <Header />
-          <ViewGraph data={this.props.viewData.graphData} />
-          <ViewStats data={this.props.viewData.statsData} />
-          <ViewProfiles />
-          <Footer />
+        <div
+          className={'container-fluid'}
+        >
+          <div className={'row'}>
+            <div className={'col-xs-12 col-md-4 col-lg-12'}>
+              <ViewGraph
+                data={this.props.viewData.graphData}
+              />
+            </div>
+            <div className={'col-xs-4 col-md-4 col-lg-4'}>
+            yo
+              <PieChart
+                data={this.props.viewData.statsData.data}
+              />
+              <PieChart
+                data={this.props.viewData.statsData.data2}
+              />
+              <PieChart
+                data={this.props.viewData.statsData.data3}
+              />
+            </div>
+            <div className={'col-xs-16'}>
+              <ViewProfiles />
+            </div>
+          </div>
         </div>
       );
     }
