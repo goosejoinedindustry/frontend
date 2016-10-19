@@ -1,8 +1,8 @@
 import { JOB_DATA } from '../jobsAction';
 
 const INITIAL_STATE = {
-  jobsList: [],
-  selectedJob: null,
+  jobsList    : [],
+  selectedJob : null,
 };
 export default function jobsReducer(state = INITIAL_STATE, action) {
   if (action.type === JOB_DATA) {

@@ -6,20 +6,20 @@ export default class Education extends Component {
       <div>
         <h3>Education</h3>
         <ul>
-        {map(this.props.edu, (result) => {
-          return ([
-            <li>
-            <h3>{result.eduTitle}</h3>
-            <div>
-            <p>{result.eduLocation}</p>
-            <p>{result.eduStart} - {result.eduEnd}</p>
-            </div>
-            </li>
-          ])
-        })}
+          {map(this.props.edu, (result) => {
+            return ([
+              <li>
+                <h3>{result.eduTitle}</h3>
+                <div>
+                  <p>{result.eduLocation}</p>
+                  <p>{result.eduStart} - {result.eduEnd}</p>
+                </div>
+              </li>
+            ]);
+          })}
         </ul>
       </div>
-    )
+    );
   }
   render() {
     return (

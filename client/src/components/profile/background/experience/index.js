@@ -6,17 +6,17 @@ export default class Experience extends Component {
       <div>
         <h3>Experience</h3>
         <ul>
-        {map(this.props.exp, (result) => {
-          return ([
-            <li>
-            <h3>{result.expTitle}</h3>
-            <div>
-            <p>{result.expLocation}</p>
-            <p>{result.expStart} - {result.expEnd}</p>
-            </div>
-            </li>
-          ]);
-        })}
+          {map(this.props.exp, (result) => {
+            return ([
+              <li>
+                <h3>{result.expTitle}</h3>
+                <div>
+                  <p>{result.expLocation}</p>
+                  <p>{result.expStart} - {result.expEnd}</p>
+                </div>
+              </li>
+            ]);
+          })}
         </ul>
       </div>
     );

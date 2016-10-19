@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
-import JobTableRow from './jobTableRow';
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow } from 'material-ui/Table';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import JobTableRow from './jobTableRow';
 injectTapEventPlugin();
 
 export default class JobTable extends Component {
@@ -12,15 +12,16 @@ export default class JobTable extends Component {
   }
   render() {
     if (!this.props.data) {
-      return <div></div>
+      return <div />;
     }
     return (
       <MuiThemeProvider>
-        <Table selectable={true}>
+        <Table selectable>
           <TableHeader
             displaySelectAll={false}
             displayRowCheckbox={false}
-            adjustForCheckbox={false}>
+            adjustForCheckbox={false}
+          >
             <TableRow>
               <TableHeaderColumn>Posted</TableHeaderColumn>
               <TableHeaderColumn>Photo</TableHeaderColumn>
@@ -28,15 +29,12 @@ export default class JobTable extends Component {
               <TableHeaderColumn>Position</TableHeaderColumn>
               <TableHeaderColumn>Job Type</TableHeaderColumn>
               <TableHeaderColumn>Location</TableHeaderColumn>
-              <TableHeaderColumn></TableHeaderColumn>
-              <TableHeaderColumn></TableHeaderColumn>
+              <TableHeaderColumn />
+              <TableHeaderColumn />
             </TableRow>
           </TableHeader>
           <TableBody>
-            // render each row
-            {map(this.props.data.jobsList, (result) => {
-              return <JobTableRow key={result.id} job={result}/>
-            })}
+            {map(this.props.data.jobsList, result => <JobTableRow key={result.id} job={result} />)}
           </TableBody>
         </Table>
       </MuiThemeProvider>
