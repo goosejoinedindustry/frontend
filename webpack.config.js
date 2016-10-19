@@ -23,12 +23,17 @@ module.exports = {
       }
     },
     {
-      test    : /\.scss$/,
-      loaders : ['style', 'css', 'sass']
-    },
-    {
       test   : /\.css$/,
       loader : 'style-loader!css-loader'
+    },
+    {
+      test    : /\.js/,
+      exclude : /node_modules/,
+      loaders : ['babel']
+    },
+    {
+      test   : /\.scss$/,
+      loader : 'style!css!sass?outputStyle=compressed'
     }],
   },
   resolve: {

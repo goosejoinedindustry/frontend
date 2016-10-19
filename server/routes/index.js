@@ -9,6 +9,7 @@ import businessJobPosting from './businessJobPosting';
 import base from './base';
 import api from './api';
 
+// Constant for labeling url
 const ROOT_URL = 'https://www.industry.co';
 
 /**
@@ -34,6 +35,7 @@ export default (app) => {
     params.twitterTags = [].concat(params.twitterTags);
     params.url = ROOT_URL + route;
     params.title = params.title ? params.title : 'Industry';
+    console.log(`Route created: ${route}`);
     renderHelper(app, route, params, template);
   }
   base(render);

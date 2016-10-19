@@ -10,7 +10,7 @@ import JobTableFilter from '../components/jobs/jobTableFilter';
 import { fetchJobs } from '../components/jobs/jobsAction';
 
 class Jobs extends Component {
-  getJobs (filterBy) {
+  getJobs(filterBy) {
     this.props.fetchJobs(filterBy);
   }
   render() {
@@ -29,9 +29,9 @@ class Jobs extends Component {
 function mapStateToProps(state) {
   return {
     jobs: state.jobsListing
-  }
+  };
 }
 
 export default connect(mapStateToProps, {
   fetchJobs
-})(Jobs)
+})(Jobs);

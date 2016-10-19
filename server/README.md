@@ -7,7 +7,7 @@ We use [EJS](http://ejs.co/) to render the initial pages on the backend and the 
 
 ### File Structure
 
-The server side file structure conatins three main components: `views`, `routes`, and `middleware`.
+The server side file structure contains three main components: `views` and `routes`.
 
 ```
 | -- Views // Contains view related files
@@ -17,4 +17,8 @@ The server side file structure conatins three main components: `views`, `routes`
 | -- Routes // Contains route logic
 | -- |
 | -- | --- index.js // Main route file. Included in server.js
+|
+| -- Config // Contains route logic
+| -- |
+| -- | --- index.js // Main configuration file that is then extended base on the environment.
 ```
