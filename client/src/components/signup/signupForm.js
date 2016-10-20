@@ -5,7 +5,8 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
 const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
-  <TextField hintText={label}
+  <TextField
+    hintText={label}
     floatingLabelText={label}
     errorText={touched && error}
     {...input}

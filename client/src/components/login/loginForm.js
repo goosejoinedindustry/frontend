@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import TextField from 'material-ui/TextField';
+
+const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
+  <TextField
+    hintText={label}
+    floatingLabelText={label}
+    errorText={touched && error}
+    {...input}
+    {...custom}
+  />
+);
 
 class LoginForm extends Component {
   render() {
@@ -7,14 +18,11 @@ class LoginForm extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email</label>
-          <Field name="email" component="input" type="email" />
+          <Field name="firstName" component={renderTextField} type="email" label="First Name" />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
-          <Field name="password" component="input" type="password" />
+          <Field name="lastName" component={renderTextField} type="password" label="Last Name" />
         </div>
-
         <button type="submit" disabled={submitting || pristine}>Submit</button>
       </form>
     );
