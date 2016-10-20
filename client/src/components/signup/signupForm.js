@@ -82,9 +82,7 @@ class SignupForm extends Component {
               <MenuItem value={'0000ff'} primaryText="Dead" />
             </Field>
           </div>
-          <div>
-            <Field name="birthday" component={renderDatePicker} label="Select Birthday" />
-          </div>
+
           <RaisedButton type="submit" disabled={pristine || submitting} label="Submit" primary />
           <RaisedButton onClick={reset} disabled={pristine || submitting} label="Clear Values" default />
         </form>

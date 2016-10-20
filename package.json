@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "lint": "eslint *",
-    "start": "babel-node server/server",
+    "start": "webpack && babel-node server/server",
     "validate": "npm ls"
   },
   "repository": {
