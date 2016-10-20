@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Popover, PopoverAnimationVertical } from 'material-ui/Popover';
-import AutoComplete from 'material-ui/AutoComplete';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 
-export default class Position extends Component {
+export default class VenueType extends Component {
   constructor(props) {
     super(props);
     this.state = {

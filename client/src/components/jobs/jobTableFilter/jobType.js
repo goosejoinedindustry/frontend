@@ -5,7 +5,7 @@ import { Popover, PopoverAnimationVertical } from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 
-export default class Position extends Component {
+export default class JobType extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,10 +19,10 @@ export default class Position extends Component {
     });
   }
   handleRequestClose() {
-    this.setState({ position: false });
+    this.setState({ open: false });
   }
   handleUpdateInput(obj, item) {
-    this.setState({ position: false });
+    this.setState({ open: false });
     // console.log(item.props.value);
     console.log(obj, item.props.value);
   }
@@ -32,7 +32,7 @@ export default class Position extends Component {
         <MuiThemeProvider>
           <RaisedButton
             onTouchTap={this.handleTouchTap.bind(this)}
-            label="Venue Type"
+            label="Job Type"
           />
         </MuiThemeProvider>
         <MuiThemeProvider>
@@ -45,11 +45,10 @@ export default class Position extends Component {
             animation={PopoverAnimationVertical}
           >
             <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="Bakery" primaryText="Bakery" />
-              <MenuItem value="Bar" primaryText="Bar" />
-              <MenuItem value="Brewery" primaryText="Brewery" />
-              <MenuItem value="Cafe" primaryText="Cafe" />
-              <MenuItem value="Casino" primaryText="Casino" />
+              <MenuItem value="Full Time" primaryText="Full Time" />
+              <MenuItem value="Part Time" primaryText="Part Time" />
+              <MenuItem value="Event" primaryText="Event" />
+              <MenuItem value="On Call" primaryText="On Call" />
             </Menu>
 
           </Popover>
