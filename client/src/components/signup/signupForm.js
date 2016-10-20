@@ -4,10 +4,11 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
+import DatePicker from 'material-ui/DatePicker';
 
 const validate = (values) => {
   const errors = {};
-  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'confirmPhoneNumber', 'zipcode', 'age'];
+  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'confirmPhoneNumber', 'zipcode', 'age', 'birthday'];
   requiredFields.forEach((field) => {
     if (!values[field]) {
       errors[field] = 'Required';
@@ -43,6 +44,9 @@ const renderSelectField = ({ input, label, meta: { touched, error }, children, .
     {...custom}
   />
 );
+const renderDatePicker = ({ input, label, meta: { touched, error }, ...custom }) => (
+  <DatePicker hintText="What is your birthday?" />
+);
 
 class SignupForm extends Component {
   render() {
@@ -77,6 +81,9 @@ class SignupForm extends Component {
               <MenuItem value={'00ff00'} primaryText="Old" />
               <MenuItem value={'0000ff'} primaryText="Dead" />
             </Field>
+          </div>
+          <div>
+            <Field name="birthday" component={renderDatePicker} label="Select Birthday" />
           </div>
           <RaisedButton type="submit" disabled={pristine || submitting} label="Submit" primary />
           <RaisedButton onClick={reset} disabled={pristine || submitting} label="Clear Values" default />

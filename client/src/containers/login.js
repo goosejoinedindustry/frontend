@@ -26,6 +26,7 @@ class Login extends Component {
     this.props.loginFormAction(values);
   }
   signInFormSubmit(values) {
+    console.log(values, 'in signinform submit');
     this.props.signupFormAction(values);
   }
   render() {
