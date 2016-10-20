@@ -5,8 +5,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Popover, PopoverAnimationVertical } from 'material-ui/Popover';
 import AutoComplete from 'material-ui/AutoComplete';
-// import Menu from 'material-ui/Menu';
-// import MenuItem from 'material-ui/MenuItem';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 // import TextField from 'material-ui/TextField';
 // const styles = {
 //   customWidth: {
@@ -17,7 +17,7 @@ export default class JobTableFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open       : true,
+      position   : true,
       dataSource : []
     };
   }
@@ -25,48 +25,49 @@ export default class JobTableFilter extends Component {
   //   // call the fetch job actions with params
   //   console.log(value);
   // }
-  handleTouchTap(event) {
+  handleTouchTapPosition(event) {
     this.setState({
-      open     : true,
+      position : true,
       anchorEl : event.currentTarget
     });
   }
   handleRequestClose() {
-    this.setState({ open: false });
+    this.setState({ position: false });
+  }
+  handleUpdateInput(obj, item) {
+    this.setState({ position: false });
+    console.log(item.props.value);
   }
   render() {
     return (
       <div>
-        <MuiThemeProvider>
-          <RaisedButton
-            onTouchTap={this.handleTouchTap.bind(this)}
-            label="Position"
-          />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose.bind(this)}
-          />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <RaisedButton
-            onTouchTap={this.handleTouchTap.bind(this)}
-            label="City"
-          />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose.bind(this)}
-          />
-        </MuiThemeProvider>
+        <div className="first">
+          <MuiThemeProvider>
+            <RaisedButton
+              onTouchTap={this.handleTouchTapPosition.bind(this)}
+              label="Position"
+            />
+          </MuiThemeProvider>
+          <MuiThemeProvider>
+            <Popover
+              open={this.state.position}
+              anchorEl={this.state.anchorEl}
+              anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+              targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+              onRequestClose={this.handleRequestClose.bind(this)}
+            >
+              <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
+                <MenuItem value="FirstOne" primaryText="First" />
+                <MenuItem value="SecondOne" primaryText="Second" />
+              </Menu>
+              <AutoComplete
+                hintText="Type anything"
+                dataSource={this.state.dataSource}
+                onUpdateInput={this.handleUpdateInput}
+              />
+            </Popover>
+          </MuiThemeProvider>
+        </div>
       </div>
     );
   }
