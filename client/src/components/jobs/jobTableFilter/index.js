@@ -1,73 +1,42 @@
 import React, { Component } from 'react';
-// import SelectField from 'material-ui/SelectField';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import RaisedButton from 'material-ui/RaisedButton';
-import { Popover, PopoverAnimationVertical } from 'material-ui/Popover';
-import AutoComplete from 'material-ui/AutoComplete';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
-// import TextField from 'material-ui/TextField';
-// const styles = {
-//   customWidth: {
-//     width: 150,
-//   },
-// };
+import Position from './position';
+import VenueType from './venueType';
 export default class JobTableFilter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      position   : true,
-      dataSource : []
-    };
-  }
-  // handleChange(event, index, value) {
-  //   // call the fetch job actions with params
-  //   console.log(value);
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     position   : false,
+  //     venueType  : false,
+  //     jobType    : false,
+  //     city       : false,
+  //     zipcode    : false,
+  //     distance   : false,
+  //     dataSource : []
+  //   };
   // }
-  handleTouchTapPosition(event) {
-    this.setState({
-      position : true,
-      anchorEl : event.currentTarget
-    });
-  }
-  handleRequestClose() {
-    this.setState({ position: false });
-  }
-  handleUpdateInput(obj, item) {
-    this.setState({ position: false });
-    console.log(item.props.value);
-  }
+  // handleTouchTapPosition(event) {
+  //   this.setState({
+  //     position : true,
+  //     anchorEl : event.currentTarget
+  //   });
+  // }
+  // handleRequestClose() {
+  //   this.setState({ position: false });
+  // }
+  // handleUpdateInput(obj, item) {
+  //   this.setState({ position: false });
+  //   // console.log(item.props.value);
+  //   console.log(obj, item.props.value);
+  // }
+  // handleInputSubmit(a, b) {
+  //   console.log(a);
+  // }
   render() {
     return (
       <div>
-        <div className="first">
-          <MuiThemeProvider>
-            <RaisedButton
-              onTouchTap={this.handleTouchTapPosition.bind(this)}
-              label="Position"
-            />
-          </MuiThemeProvider>
-          <MuiThemeProvider>
-            <Popover
-              open={this.state.position}
-              anchorEl={this.state.anchorEl}
-              anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-              targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-              onRequestClose={this.handleRequestClose.bind(this)}
-            >
-              <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-                <MenuItem value="FirstOne" primaryText="First" />
-                <MenuItem value="SecondOne" primaryText="Second" />
-              </Menu>
-              <AutoComplete
-                hintText="Type anything"
-                dataSource={this.state.dataSource}
-                onUpdateInput={this.handleUpdateInput}
-              />
-            </Popover>
-          </MuiThemeProvider>
-        </div>
+        <Position />
+        <VenueType />
       </div>
     );
   }
