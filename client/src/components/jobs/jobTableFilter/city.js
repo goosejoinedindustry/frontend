@@ -55,6 +55,7 @@ export default class City extends Component {
               dataSource={this.state.dataSource}
               onNewRequest={this.handleInputSubmit.bind(this)}
             />
+            <div>Popular Locations:</div>
             <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
               <MenuItem value="Austin" primaryText="Austin" />
               <MenuItem value="Los Angeles" primaryText="Los Angeles" />
@@ -63,7 +64,6 @@ export default class City extends Component {
               <MenuItem value="Santa Monica" primaryText="Santa Monica" />
               <MenuItem value="Seatle" primaryText="Seatle" />
             </Menu>
-
           </Popover>
         </MuiThemeProvider>
       </div>

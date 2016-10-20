@@ -23,11 +23,6 @@ export default class Position extends Component {
   handleRequestClose() {
     this.setState({ open: false });
   }
-  handleUpdateInput(obj, item) {
-    this.setState({ open: false });
-    // console.log(item.props.value);
-    console.log(obj, item.props.value);
-  }
   handleInputSubmit(a, b) {
     console.log(a);
     this.setState({ open: false });
@@ -50,10 +45,6 @@ export default class Position extends Component {
             onRequestClose={this.handleRequestClose.bind(this)}
             animation={PopoverAnimationVertical}
           >
-            <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="FirstOne" primaryText="First" />
-              <MenuItem value="SecondOne" primaryText="Second" />
-            </Menu>
             <AutoComplete
               hintText="Search for a position"
               dataSource={this.state.dataSource}
