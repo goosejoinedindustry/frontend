@@ -55,7 +55,7 @@ export default class Position extends Component {
               <MenuItem value="SecondOne" primaryText="Second" />
             </Menu>
             <AutoComplete
-              hintText="Position Type"
+              hintText="Search for a position"
               dataSource={this.state.dataSource}
               onNewRequest={this.handleInputSubmit.bind(this)}
             />

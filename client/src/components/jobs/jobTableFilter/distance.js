@@ -3,10 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Popover, PopoverAnimationVertical } from 'material-ui/Popover';
 import AutoComplete from 'material-ui/AutoComplete';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
 
-export default class City extends Component {
+export default class Distance extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,11 +21,6 @@ export default class City extends Component {
   handleRequestClose() {
     this.setState({ open: false });
   }
-  handleUpdateInput(obj, item) {
-    this.setState({ open: false });
-    // console.log(item.props.value);
-    console.log(obj, item.props.value);
-  }
   handleInputSubmit(a, b) {
     console.log(a);
     this.setState({ open: false });
@@ -38,7 +31,7 @@ export default class City extends Component {
         <MuiThemeProvider>
           <RaisedButton
             onTouchTap={this.handleTouchTap.bind(this)}
-            label="City"
+            label="Distance"
           />
         </MuiThemeProvider>
         <MuiThemeProvider>
@@ -51,18 +44,10 @@ export default class City extends Component {
             animation={PopoverAnimationVertical}
           >
             <AutoComplete
-              hintText="Search For a City"
+              hintText="Distance in Miles"
               dataSource={this.state.dataSource}
               onNewRequest={this.handleInputSubmit.bind(this)}
             />
-            <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="Austin" primaryText="Austin" />
-              <MenuItem value="Los Angeles" primaryText="Los Angeles" />
-              <MenuItem value="Las Vegas" primaryText="Las Vegas" />
-              <MenuItem value="San Diego" primaryText="San Diego" />
-              <MenuItem value="Santa Monica" primaryText="Santa Monica" />
-              <MenuItem value="Seatle" primaryText="Seatle" />
-            </Menu>
 
           </Popover>
         </MuiThemeProvider>
