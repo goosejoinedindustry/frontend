@@ -10,20 +10,20 @@ export default class Position extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      position: false
+      open: false
     };
   }
   handleTouchTap(event) {
     this.setState({
-      position : true,
+      open     : true,
       anchorEl : event.currentTarget
     });
   }
   handleRequestClose() {
-    this.setState({ position: false });
+    this.setState({ open: false });
   }
   handleUpdateInput(obj, item) {
-    this.setState({ position: false });
+    this.setState({ open: false });
     // console.log(item.props.value);
     console.log(obj, item.props.value);
   }
@@ -38,7 +38,7 @@ export default class Position extends Component {
         </MuiThemeProvider>
         <MuiThemeProvider>
           <Popover
-            open={this.state.position}
+            open={this.state.open}
             anchorEl={this.state.anchorEl}
             anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
             targetOrigin={{ horizontal: 'left', vertical: 'top' }}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Popover, PopoverAnimationVertical } from 'material-ui/Popover';
-import AutoComplete from 'material-ui/AutoComplete';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 
@@ -10,8 +9,7 @@ export default class Position extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open       : false,
-      dataSource : []
+      open: false
     };
   }
   handleTouchTap(event) {
@@ -21,16 +19,12 @@ export default class Position extends Component {
     });
   }
   handleRequestClose() {
-    this.setState({ open: false });
+    this.setState({ position: false });
   }
   handleUpdateInput(obj, item) {
-    this.setState({ open: false });
+    this.setState({ position: false });
     // console.log(item.props.value);
     console.log(obj, item.props.value);
-  }
-  handleInputSubmit(a, b) {
-    console.log(a);
-    this.setState({ open: false });
   }
   render() {
     return (
@@ -38,7 +32,7 @@ export default class Position extends Component {
         <MuiThemeProvider>
           <RaisedButton
             onTouchTap={this.handleTouchTap.bind(this)}
-            label="Position"
+            label="Venue Type"
           />
         </MuiThemeProvider>
         <MuiThemeProvider>
@@ -51,14 +45,13 @@ export default class Position extends Component {
             animation={PopoverAnimationVertical}
           >
             <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="FirstOne" primaryText="First" />
-              <MenuItem value="SecondOne" primaryText="Second" />
+              <MenuItem value="Bakery" primaryText="Bakery" />
+              <MenuItem value="Bar" primaryText="Bar" />
+              <MenuItem value="Brewery" primaryText="Brewery" />
+              <MenuItem value="Cafe" primaryText="Cafe" />
+              <MenuItem value="Casino" primaryText="Casino" />
             </Menu>
-            <AutoComplete
-              hintText="Position Type"
-              dataSource={this.state.dataSource}
-              onNewRequest={this.handleInputSubmit.bind(this)}
-            />
+
           </Popover>
         </MuiThemeProvider>
       </div>
