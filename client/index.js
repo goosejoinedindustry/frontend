@@ -12,7 +12,7 @@ import Reducers from './src/reducers';
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: deepOrange500,
+    primary1Color: deepOrange500,
   },
 });
 const createStoreWithMiddleware = applyMiddleware()(createStore);

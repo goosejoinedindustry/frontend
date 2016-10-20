@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AreaChart, ResponsiveContainer, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { Card } from 'material-ui';
 
 export default class ViewGraph extends Component {
 
@@ -16,22 +17,24 @@ export default class ViewGraph extends Component {
 
   render() {
     return (
-      <div
-        style={{ height: this.state.height }}
-      >
-        <ResponsiveContainer>
-          <AreaChart
-            data={this.state.data}
-            margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
-          >
-            <XAxis dataKey="name" />
-            <YAxis />
-            <CartesianGrid strokeDasharray="3 3" />
-            <Tooltip />
-            <Area type="monotone" dataKey="views" stroke="#F6931D" fill="#F6931D" fillOpacity={0.3} />
-          </AreaChart>
-        </ResponsiveContainer>
-      </div>
+      <Card label={'Graph'}>
+        <div
+          style={{ height: this.state.height }}
+        >
+          <ResponsiveContainer>
+            <AreaChart
+              data={this.state.data}
+              margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
+            >
+              <XAxis dataKey="name" />
+              <YAxis />
+              <CartesianGrid strokeDasharray="3 3" />
+              <Tooltip />
+              <Area type="monotone" dataKey="views" stroke="#F6931D" fill="#F6931D" fillOpacity={0.3} />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      </Card>
     );
   }
 }

@@ -21,16 +21,15 @@ class Insights extends Component {
     if (this.props.viewData.statsData) {
       return (
         <div
-          className={'container-fluid'}
+          className={'container'}
         >
           <div className={'row'}>
-            <div className={'col-xs-12 col-md-4 col-lg-12'}>
+            <div className={'col-xs-12'}>
               <ViewGraph
                 data={this.props.viewData.graphData}
               />
             </div>
-            <div className={'col-xs-4 col-md-4 col-lg-4'}>
-            yo
+            <div className={'col-xs-4'}>
               <PieChart
                 data={this.props.viewData.statsData.data}
               />
@@ -41,6 +40,8 @@ class Insights extends Component {
                 data={this.props.viewData.statsData.data3}
               />
             </div>
+          </div>
+          <div className={'row'}>
             <div className={'col-xs-16'}>
               <ViewProfiles />
             </div>
