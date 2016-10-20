@@ -3,18 +3,22 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, browserHistory } from 'react-router';
-import { deepOrange500 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Routes from './routes';
 import Reducers from './src/reducers';
 
 const muiTheme = getMuiTheme({
-  palette: {
-    primary1Color: deepOrange500,
-  },
+  fontFamily : 'Roboto, sans-serif',
+  palette    : {
+    primary1Color: '#F7931D'
+  }
 });
+
+injectTapEventPlugin();
+
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(

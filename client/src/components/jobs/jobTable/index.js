@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow } from 'material-ui/Table';
 import JobTableRow from './jobTableRow';
-
-injectTapEventPlugin();
 
 export default class JobTable extends Component {
   componentWillMount() {
