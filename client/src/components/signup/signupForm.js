@@ -3,7 +3,27 @@ import { Field, reduxForm } from 'redux-form';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import RaisedButton from 'material-ui/RaisedButton';
 
+const validate = (values) => {
+  const errors = {};
+  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'confirmPhoneNumber', 'zipcode', 'age'];
+  requiredFields.forEach((field) => {
+    if (!values[field]) {
+      errors[field] = 'Required';
+    }
+  });
+  if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address';
+  }
+  if (values.email !== values.confirmEmail) {
+    errors.confirmEmail = 'Please Confirm Email';
+  }
+  if (values.phoneNumber !== values.confirmPhoneNumber) {
+    errors.confirmPhoneNumber = 'Please Confirm Phone Number';
+  }
+  return errors;
+};
 const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
   <TextField
     hintText={label}
@@ -40,16 +60,16 @@ class SignupForm extends Component {
             <Field name="email" component={renderTextField} label="Email" />
           </div>
           <div>
-            <Field name="confirm email" component={renderTextField} label="Confirm Email" />
+            <Field name="confirmEmail" component={renderTextField} label="Confirm Email" />
           </div>
           <div>
-            <Field name="phoneNumber" component={renderTextField} label="Phone Number" />
+            <Field name="phoneNumber" type="number" component={renderTextField} label="Phone Number" />
           </div>
           <div>
-            <Field name="confirm phoneNumber" component={renderTextField} label="Confirm Phone Number" />
+            <Field name="confirmPhoneNumber" type="number" component={renderTextField} label="Confirm Phone Number" />
           </div>
           <div>
-            <Field name="zipcode" component={renderTextField} label="Zip Code" />
+            <Field name="zipcode" type="number" component={renderTextField} label="Zip Code" />
           </div>
           <div>
             <Field name="age" component={renderSelectField} label="Select Age">
@@ -58,9 +78,8 @@ class SignupForm extends Component {
               <MenuItem value={'0000ff'} primaryText="Dead" />
             </Field>
           </div>
-          <button type="submit" disabled={pristine || submitting}>Submit</button>
-          <button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values
-          </button>
+          <RaisedButton type="submit" disabled={pristine || submitting} label="Submit" primary />
+          <RaisedButton onClick={reset} disabled={pristine || submitting} label="Clear Values" default />
         </form>
       </div>
     );
@@ -68,4 +87,5 @@ class SignupForm extends Component {
 }
 export default reduxForm({
   form: 'SignupForm',
+  validate
 })(SignupForm);
