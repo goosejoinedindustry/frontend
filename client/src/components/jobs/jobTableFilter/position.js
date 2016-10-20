@@ -30,28 +30,27 @@ export default class Position extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider>
-          <RaisedButton
-            onTouchTap={this.handleTouchTap.bind(this)}
-            label="Position"
+
+        <RaisedButton
+          onTouchTap={this.handleTouchTap.bind(this)}
+          label="Position"
+        />
+
+        <Popover
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+          targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+          onRequestClose={this.handleRequestClose.bind(this)}
+          animation={PopoverAnimationVertical}
+        >
+          <AutoComplete
+            hintText="Search for a position"
+            dataSource={this.state.dataSource}
+            onNewRequest={this.handleInputSubmit.bind(this)}
           />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose.bind(this)}
-            animation={PopoverAnimationVertical}
-          >
-            <AutoComplete
-              hintText="Search for a position"
-              dataSource={this.state.dataSource}
-              onNewRequest={this.handleInputSubmit.bind(this)}
-            />
-          </Popover>
-        </MuiThemeProvider>
+        </Popover>
+
       </div>
     );
   }

@@ -29,30 +29,27 @@ export default class JobType extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider>
-          <RaisedButton
-            onTouchTap={this.handleTouchTap.bind(this)}
-            label="Job Type"
-          />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose.bind(this)}
-            animation={PopoverAnimationVertical}
-          >
-            <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="Full Time" primaryText="Full Time" />
-              <MenuItem value="Part Time" primaryText="Part Time" />
-              <MenuItem value="Event" primaryText="Event" />
-              <MenuItem value="On Call" primaryText="On Call" />
-            </Menu>
+        <RaisedButton
+          onTouchTap={this.handleTouchTap.bind(this)}
+          label="Job Type"
+        />
 
-          </Popover>
-        </MuiThemeProvider>
+        <Popover
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+          targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+          onRequestClose={this.handleRequestClose.bind(this)}
+          animation={PopoverAnimationVertical}
+        >
+          <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
+            <MenuItem value="Full Time" primaryText="Full Time" />
+            <MenuItem value="Part Time" primaryText="Part Time" />
+            <MenuItem value="Event" primaryText="Event" />
+            <MenuItem value="On Call" primaryText="On Call" />
+          </Menu>
+
+        </Popover>
       </div>
     );
   }

@@ -35,37 +35,33 @@ export default class City extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider>
-          <RaisedButton
-            onTouchTap={this.handleTouchTap.bind(this)}
-            label="City"
+        <RaisedButton
+          onTouchTap={this.handleTouchTap.bind(this)}
+          label="City"
+        />
+        <Popover
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+          targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+          onRequestClose={this.handleRequestClose.bind(this)}
+          animation={PopoverAnimationVertical}
+        >
+          <AutoComplete
+            hintText="Search For a City"
+            dataSource={this.state.dataSource}
+            onNewRequest={this.handleInputSubmit.bind(this)}
           />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose.bind(this)}
-            animation={PopoverAnimationVertical}
-          >
-            <AutoComplete
-              hintText="Search For a City"
-              dataSource={this.state.dataSource}
-              onNewRequest={this.handleInputSubmit.bind(this)}
-            />
-            <div>Popular Locations:</div>
-            <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="Austin" primaryText="Austin" />
-              <MenuItem value="Los Angeles" primaryText="Los Angeles" />
-              <MenuItem value="Las Vegas" primaryText="Las Vegas" />
-              <MenuItem value="San Diego" primaryText="San Diego" />
-              <MenuItem value="Santa Monica" primaryText="Santa Monica" />
-              <MenuItem value="Seatle" primaryText="Seatle" />
-            </Menu>
-          </Popover>
-        </MuiThemeProvider>
+          <div>Popular Locations:</div>
+          <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
+            <MenuItem value="Austin" primaryText="Austin" />
+            <MenuItem value="Los Angeles" primaryText="Los Angeles" />
+            <MenuItem value="Las Vegas" primaryText="Las Vegas" />
+            <MenuItem value="San Diego" primaryText="San Diego" />
+            <MenuItem value="Santa Monica" primaryText="Santa Monica" />
+            <MenuItem value="Seatle" primaryText="Seatle" />
+          </Menu>
+        </Popover>
       </div>
     );
   }

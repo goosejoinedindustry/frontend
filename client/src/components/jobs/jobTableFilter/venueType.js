@@ -29,31 +29,29 @@ export default class VenueType extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider>
-          <RaisedButton
-            onTouchTap={this.handleTouchTap.bind(this)}
-            label="Venue Type"
-          />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose.bind(this)}
-            animation={PopoverAnimationVertical}
-          >
-            <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
-              <MenuItem value="Bakery" primaryText="Bakery" />
-              <MenuItem value="Bar" primaryText="Bar" />
-              <MenuItem value="Brewery" primaryText="Brewery" />
-              <MenuItem value="Cafe" primaryText="Cafe" />
-              <MenuItem value="Casino" primaryText="Casino" />
-            </Menu>
 
-          </Popover>
-        </MuiThemeProvider>
+        <RaisedButton
+          onTouchTap={this.handleTouchTap.bind(this)}
+          label="Venue Type"
+        />
+
+        <Popover
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+          targetOrigin={{ horizontal: 'left', vertical: 'top' }}
+          onRequestClose={this.handleRequestClose.bind(this)}
+          animation={PopoverAnimationVertical}
+        >
+          <Menu onItemTouchTap={this.handleUpdateInput.bind(this)}>
+            <MenuItem value="Bakery" primaryText="Bakery" />
+            <MenuItem value="Bar" primaryText="Bar" />
+            <MenuItem value="Brewery" primaryText="Brewery" />
+            <MenuItem value="Cafe" primaryText="Cafe" />
+            <MenuItem value="Casino" primaryText="Casino" />
+          </Menu>
+
+        </Popover>
       </div>
     );
   }
