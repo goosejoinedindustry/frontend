@@ -7,7 +7,7 @@ import Checkbox from 'material-ui/Checkbox';
 
 const validate = (values) => {
   const errors = {};
-  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'confirmPhoneNumber', 'zipcode', 'birthday', 'employed'];
+  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'zipcode', 'birthday'];
   requiredFields.forEach((field) => {
     if (!values[field]) {
       errors[field] = 'Required';
@@ -18,9 +18,6 @@ const validate = (values) => {
   }
   if (values.email !== values.confirmEmail) {
     errors.confirmEmail = 'Please Confirm Email';
-  }
-  if (values.phoneNumber !== values.confirmPhoneNumber) {
-    errors.confirmPhoneNumber = 'Please Confirm Phone Number';
   }
   return errors;
 };
@@ -75,16 +72,10 @@ class SignupForm extends Component {
             <Field name="phoneNumber" type="number" component={renderTextField} label="Phone Number" />
           </div>
           <div>
-            <Field name="confirmPhoneNumber" type="number" component={renderTextField} label="Confirm Phone Number" />
-          </div>
-          <div>
             <Field name="zipcode" type="number" component={renderTextField} label="Zipcode" />
           </div>
           <div>
-            <Field name="Birthday" component={renderDatePicker} label="Birthday" />
-          </div>
-          <div>
-            <Field name="employed" component={renderCheckbox} label="Accept the Terms" />
+            <Field name="birthday" component={renderDatePicker} label="Birthday" />
           </div>
           <RaisedButton type="submit" disabled={pristine || submitting} label="Submit" primary />
           <RaisedButton onClick={reset} disabled={pristine || submitting} label="Clear Values" default />
