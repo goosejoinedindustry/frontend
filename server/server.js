@@ -5,9 +5,10 @@ import routes from './routes';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import config from './config/webpack.config';
-
+import config from '../webpack.config';
+console.log(config);
 const app = express();
+const compiler = webpack(config);
 
 // Set port depending on process.env
 const isDeveloping = process.env.NODE_ENV !== 'production';
@@ -20,35 +21,31 @@ app.set('views', path.join(__dirname, 'views'));
 // Set and point to static assets
 app.use(express.static(path.join(__dirname, '../', 'client')));
 
-// Loads routes
-routes(app);
-
 // Determines workflow path
 if (isDeveloping) {
   console.log(':D <-- Jasper');
-  const compiler = webpack(config);
   const middleware = webpackDevMiddleware(compiler, {
     publicPath  : config.output.publicPath,
-    contentBase : 'http://localhost',
+    contentBase : '/',
     stats       : {
       colors       : true,
       hash         : false,
       timings      : true,
       chunks       : false,
       chunkModules : false,
-      modules      : false
-    }
+      modules      : false,
+    },
   });
 
   app.use(middleware);
-  app.use(webpackHotMiddleware(compiler, {
-    log       : console.log,
-    path      : '/__webpack_hmr',
-    heartbeat : 10 * 1000
-  }));
+  app.use(webpackHotMiddleware(compiler));
 } else {
   // Production config goes here
+  console.log('get outta here');
 }
+
+// Loads routes AFTER loading webpackDevMiddleware
+routes(app);
 
 app.listen(port, 'localhost', (err) => {
   if (err) {
