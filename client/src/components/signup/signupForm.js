@@ -44,8 +44,14 @@ const renderSelectField = ({ input, label, meta: { touched, error }, children, .
     {...custom}
   />
 );
-const renderDatePicker = ({ input, label, meta: { touched, error }, ...custom }) => (
-  <DatePicker hintText="What is your birthday?" />
+const renderDatePicker = ({ input, defaultValue, meta: { touched, error } }) => (
+  <DatePicker
+    hintText="What is your birthday?"
+    errorText={touched && error}
+    {...input}
+    value={input.value !== '' ? new Date(input.value) : null}
+    onChange={(event, value) => { console.log(value); input.onChange(value); }}
+  />
 );
 
 class SignupForm extends Component {
@@ -54,6 +60,9 @@ class SignupForm extends Component {
     return (
       <div>
         <form onSubmit={handleSubmit}>
+          <div>
+            <Field name="Birthday" component={renderDatePicker} label="Birthday" />
+          </div>
           <div>
             <Field name="firstName" component={renderTextField} label="First Name" />
           </div>
@@ -73,13 +82,13 @@ class SignupForm extends Component {
             <Field name="confirmPhoneNumber" type="number" component={renderTextField} label="Confirm Phone Number" />
           </div>
           <div>
-            <Field name="zipcode" type="number" component={renderTextField} label="Zip Code" />
+            <Field name="zipcode" type="number" component={renderTextField} label="Zipcode" />
           </div>
           <div>
             <Field name="age" component={renderSelectField} label="Select Age">
-              <MenuItem value={'ff0000'} primaryText="Young" />
-              <MenuItem value={'00ff00'} primaryText="Old" />
-              <MenuItem value={'0000ff'} primaryText="Dead" />
+              <MenuItem value={'Young'} primaryText="Young" />
+              <MenuItem value={'Old'} primaryText="Old" />
+              <MenuItem value={'Dead'} primaryText="Dead" />
             </Field>
           </div>
 
@@ -91,6 +100,5 @@ class SignupForm extends Component {
   }
 }
 export default reduxForm({
-  form: 'SignupForm',
-  validate
+  form: 'SignupForm'
 })(SignupForm);
