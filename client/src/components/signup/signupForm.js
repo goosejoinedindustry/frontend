@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import DatePicker from 'material-ui/DatePicker';
+import Checkbox from 'material-ui/Checkbox';
 
 const validate = (values) => {
   const errors = {};
-  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'confirmPhoneNumber', 'zipcode', 'age', 'birthday'];
+  const requiredFields = ['firstName', 'lastName', 'email', 'confirmEmail', 'phoneNumber', 'confirmPhoneNumber', 'zipcode', 'birthday', 'employed'];
   requiredFields.forEach((field) => {
     if (!values[field]) {
       errors[field] = 'Required';
@@ -25,6 +24,14 @@ const validate = (values) => {
   }
   return errors;
 };
+
+const renderCheckbox = ({ input, label }) => (
+  <Checkbox
+    label={label}
+    checked={input.value ? true : false}
+    onCheck={input.onChange}
+  />
+);
 const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
   <TextField
     hintText={label}
@@ -34,21 +41,13 @@ const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) 
     {...custom}
   />
 );
-const renderSelectField = ({ input, label, meta: { touched, error }, children, ...custom }) => (
-  <SelectField
-    floatingLabelText={label}
-    errorText={touched && error}
-    {...input}
-    onChange={(event, index, value) => input.onChange(value)}
-    children={children}
-    {...custom}
-  />
-);
-const renderDatePicker = ({ input, defaultValue, meta: { touched, error } }) => (
+const renderDatePicker = ({ input, meta: { touched, error } }) => (
   <DatePicker
     hintText="What is your birthday?"
     errorText={touched && error}
     {...input}
+    locale="en-US"
+    firstDayOfWeek={0}
     value={input.value !== '' ? new Date(input.value) : null}
     onChange={(event, value) => { console.log(value); input.onChange(value); }}
   />
@@ -60,9 +59,6 @@ class SignupForm extends Component {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <div>
-            <Field name="Birthday" component={renderDatePicker} label="Birthday" />
-          </div>
           <div>
             <Field name="firstName" component={renderTextField} label="First Name" />
           </div>
@@ -85,13 +81,11 @@ class SignupForm extends Component {
             <Field name="zipcode" type="number" component={renderTextField} label="Zipcode" />
           </div>
           <div>
-            <Field name="age" component={renderSelectField} label="Select Age">
-              <MenuItem value={'Young'} primaryText="Young" />
-              <MenuItem value={'Old'} primaryText="Old" />
-              <MenuItem value={'Dead'} primaryText="Dead" />
-            </Field>
+            <Field name="Birthday" component={renderDatePicker} label="Birthday" />
           </div>
-
+          <div>
+            <Field name="employed" component={renderCheckbox} label="Accept the Terms" />
+          </div>
           <RaisedButton type="submit" disabled={pristine || submitting} label="Submit" primary />
           <RaisedButton onClick={reset} disabled={pristine || submitting} label="Clear Values" default />
         </form>
@@ -100,5 +94,6 @@ class SignupForm extends Component {
   }
 }
 export default reduxForm({
-  form: 'SignupForm'
+  form: 'SignupForm',
+  validate
 })(SignupForm);
