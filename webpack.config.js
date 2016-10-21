@@ -1,10 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context : __dirname,
   entry   : [
     // 'webpack-dev-server',
-    // 'webpack-hot-middleware/client',
+    // 'webpack-hot-middleware/client?reload=true',
     // 'webpack/hot/only-dev-server',
     './client/index.js'
   ],
@@ -27,11 +28,6 @@ module.exports = {
       loader : 'style-loader!css-loader'
     },
     {
-      test    : /\.js/,
-      exclude : /node_modules/,
-      loaders : ['babel']
-    },
-    {
       test   : /\.scss$/,
       loader : 'style!css!sass?outputStyle=compressed'
     }],
@@ -39,14 +35,17 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
   },
-  devServer: {
-    historyApiFallback : true,
-    contentBase        : './'
-  },
   stats: {
     color   : true,
     reasons : true,
     chunks  : false
-  }
-  // watch: true
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('local')
+    })
+  ]
 };
