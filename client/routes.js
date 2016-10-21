@@ -10,49 +10,41 @@ import policies from './src/containers/policies';
 import profile from './src/containers/profile';
 import settings from './src/containers/settings';
 
-import appview from './app';
-
-// Wraps Global components with views
-const Login = appview(login);
-const Applications = appview(applications);
-const BusinessJobPosting = appview(businessJobPosting);
-const Insights = appview(insights);
-const Jobs = appview(jobs);
-const Policies = appview(policies);
-const Settings = appview(settings);
-const Profile = appview(profile);
 
 export default [
     /* Signup */
-  <Route path="/" component={Login} />,
+  <Route path="/" component={login} />,
 
   /* Landing Pages */
-  <Route path="/user" component={Login} />,
-  <Route path="/business" component={Login} />,
+  <Route path="/user" component={login} />,
+  <Route path="/business" component={login} />,
 
   /* Licenses */
-  <Route path="/licenses/privacy" component={Policies} />,
-  <Route path="/licenses/terms" component={Policies} />,
+  <Route path="/licenses/privacy" component={policies} />,
+  <Route path="/licenses/terms" component={policies} />,
+
+  /* Help / FAQ */
+  <Route path="/help" component={policies} />,
 
   /* Jobs (Public) */
   <Route path="/jobs" component={jobs} />,
-  <Route path="/jobs/:listingid" component={Jobs} />,
+  <Route path="/jobs/:listingid" component={jobs} />,
 
   /* Settings */
-  <Route path="/settings" component={Settings} />,
+  <Route path="/settings" component={settings} />,
 
   /* User Insights */
-  <Route path="/insights" component={Insights} />,
+  <Route path="/insights" component={insights} />,
 
   /* User applications */
-  <Route path="/applications" component={Applications} />,
+  <Route path="/applications" component={applications} />,
 
   /* User/Business Profile Pages (Public & Unique) */
-  <Route path="/:profileName" component={Profile} />,
+  <Route path="/:profileName" component={profile} />,
 
   /* Business Job Listings */
-  <Route path="/:businessName/listings" component={BusinessJobPosting} />,
+  <Route path="/:businessName/listings" component={businessJobPosting} />,
 
   /* Business Billing Page */
-  <Route path="/:businessName/billing" component={Profile} />,
+  <Route path="/:businessName/billing" component={profile} />,
 ];

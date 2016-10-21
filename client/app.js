@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from './src/components/shared/header';
 import Footer from './src/components/shared/footer';
-import Sidebar from './src/components/shared/sidebar';
 
-const exportClass = (View) => {
+export default (Container) => {
   return class ViewClass extends Component {
+
     componentDidMount() {
       window.Intercom('boot', {
         app_id: 'la8r83c9'
@@ -13,17 +13,12 @@ const exportClass = (View) => {
 
     render() {
       return (
-        <div>
+        <div className={'container'}>
           <Header />
-          <Sidebar />
-          <View />
+          {Container}
           <Footer />
         </div>
         );
     }
    };
 };
-
-const appView = view => exportClass(view);
-
-export default appView;

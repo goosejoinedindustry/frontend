@@ -13,6 +13,12 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Routes from './routes';
 import Reducers from './src/reducers';
 
+import appWrapper from './app';
+
+const App = appWrapper((
+  <Router history={browserHistory} routes={Routes} />
+));
+
 const muiTheme = getMuiTheme({
   fontFamily : 'Roboto, sans-serif',
   palette    : {
@@ -27,15 +33,9 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 ReactDOM.render(
   <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={createStoreWithMiddleware(Reducers)}>
-      <Router history={browserHistory} routes={Routes} />
+      <App />
     </Provider>
   </MuiThemeProvider>
   /* eslint-disable */
   , document.getElementById('main'));
   /* eslint-enable */
-
-/*
-<Provider store={CreateStoreWithMiddleware(Reducers)}>
-  <Routes />
-</Provider>
-*/

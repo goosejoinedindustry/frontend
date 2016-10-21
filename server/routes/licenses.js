@@ -7,4 +7,8 @@ export default (render) => {
   render('/licenses/terms', {
     title: 'Industry | Data'
   });
+
+  render('/help', {
+    title: 'Industry | Data'
+  });
 };

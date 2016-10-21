@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Header from '../components/shared/header';
-import Footer from '../components/shared/footer';
 import ViewGraph from '../components/insights/viewGraph';
 import ViewProfiles from '../components/insights/viewProfiles';
 import PieChart from '../components/insights/pieChart';
@@ -47,15 +45,11 @@ class Insights extends Component {
             </div>
           </div>
         </div>
-      );
+        );
     }
-
     return (
       <div>
-        <Header />
         <div> Loading </div>
-
-        <Footer />
       </div>
     );
   }
