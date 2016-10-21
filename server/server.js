@@ -22,27 +22,27 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, '../', 'client')));
 
 // Determines workflow path
-if (isDeveloping) {
-  console.log(':D <-- Jasper');
-  const middleware = webpackDevMiddleware(compiler, {
-    publicPath  : config.output.publicPath,
-    contentBase : '/',
-    stats       : {
-      colors       : true,
-      hash         : false,
-      timings      : true,
-      chunks       : false,
-      chunkModules : false,
-      modules      : false,
-    },
-  });
-
-  app.use(middleware);
-  app.use(webpackHotMiddleware(compiler));
-} else {
-  // Production config goes here
-  console.log('get outta here');
-}
+// if (isDeveloping) {
+//   console.log(':D <-- Jasper');
+//   const middleware = webpackDevMiddleware(compiler, {
+//     publicPath  : config.output.publicPath,
+//     contentBase : '/',
+//     stats       : {
+//       colors       : true,
+//       hash         : false,
+//       timings      : true,
+//       chunks       : false,
+//       chunkModules : false,
+//       modules      : false,
+//     },
+//   });
+//
+//   app.use(middleware);
+//   app.use(webpackHotMiddleware(compiler));
+// } else {
+//   // Production config goes here
+//   console.log('get outta here');
+// }
 
 // Loads routes AFTER loading webpackDevMiddleware
 routes(app);
