@@ -17,10 +17,21 @@ const filter = {
   zipcode   : null,
   distance  : null
 };
+
 export default class JobTableFilter extends Component {
+  renderFilter() {
+    const result = [];
+    for (const key in filter) {
+      if (filter[key]) {
+        result.push(filter[key]);
+      }
+    }
+    return result;
+  }
   updateFilter(type, value) {
     filter[type] = value;
     this.props.fetchJobs(filter);
+    this.forceUpdate();
   }
   render() {
     return (
@@ -33,7 +44,7 @@ export default class JobTableFilter extends Component {
           <Zipcode updateFilter={this.updateFilter.bind(this)} />
           <Distance updateFilter={this.updateFilter.bind(this)} />
         </div>
-        {map(display, item => `${item} `)}
+        {this.renderFilter()}
         <div />
       </div>
     );
