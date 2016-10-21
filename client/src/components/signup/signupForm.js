@@ -25,7 +25,7 @@ const validate = (values) => {
 const renderCheckbox = ({ input, label }) => (
   <Checkbox
     label={label}
-    checked={input.value ? true : false}
+    checked={!!input.value}
     onCheck={input.onChange}
   />
 );

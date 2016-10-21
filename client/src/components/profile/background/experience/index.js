@@ -22,7 +22,6 @@ export default class Experience extends Component {
     );
   }
   render() {
-    console.log(this.props.exp, 'eduuuu');
     return (
       // going to be a list
       this.renderExpItems()

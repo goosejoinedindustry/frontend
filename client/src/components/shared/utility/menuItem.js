@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MenuItem } from 'material-ui';
+import { MenuItem, Dialog, RaisedButton } from 'material-ui';
 import { browserHistory } from 'react-router';
 
 class menuItem extends Component {
@@ -8,31 +8,61 @@ class menuItem extends Component {
     super(props);
 
     this.state = {
-      name  : props.name,
-      icon  : props.icon,
-      route : props.route
+      click   : props.click,
+      name    : props.name,
+      icon    : props.icon,
+      route   : props.route,
+      open    : false,
+      modal   : props.modal,
+      confirm : props.confirm || 'Confirm'
     };
   }
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
 
   handleClickReRoute() {
     browserHistory.push(this.state.route);
   }
 
-  handleClickModal() {
-    console.log(`Make ${this.state.name} appear`);
-  }
-
   render() {
+    const actions = [
+      <RaisedButton
+        label="Cancel"
+        primary
+        onTouchTap={this.handleClose}
+      />,
+      <RaisedButton
+        label={this.state.confirm}
+        primary
+        onTouchTap={this.handleClose}
+      />,
+    ];
+
     return (
-      <section>
-        <MenuItem onClick={this.state.route ? this.handleClickReRoute.bind(this) : this.handleClickModal.bind(this)}>
-          <i className={this.state.icon} />
+      <section onClick={this.state.click}>
+        <MenuItem onClick={this.state.route ? this.handleClickReRoute.bind(this) : this.handleOpen}>
+          <i className={`fa fa-${this.state.icon}`} aria-hidden="true" />
           {this.state.name}
         </MenuItem>
+        <Dialog
+          title={this.state.name}
+          actions={actions}
+          modal={false}
+          open={this.state.open}
+          onRequestClose={this.handleClose}
+        >
+          {this.state.modal}
+        </Dialog>
       </section>
     );
   }
 }
-
 
 export default menuItem;

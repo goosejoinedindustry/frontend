@@ -42,21 +42,20 @@ module.exports = {
       },
       { test   : /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader : 'file-loader'
-      }
-    },
-    {
-      test   : /\.css$/,
-      loader : 'style-loader!css-loader'
-    },
-    {
-      test    : /\.js/,
-      exclude : /node_modules/,
-      loaders : ['babel']
-    },
-    {
-      test   : /\.scss$/,
-      loader : 'style!css!sass?outputStyle=compressed'
-    }],
+      },
+      {
+        test   : /\.css$/,
+        loader : 'style-loader!css-loader'
+      },
+      {
+        test    : /\.js/,
+        exclude : /node_modules/,
+        loaders : ['babel']
+      },
+      {
+        test   : /\.scss$/,
+        loader : 'style!css!sass?outputStyle=compressed'
+      }],
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
+
 export default class Education extends Component {
   renderExpItems() {
     return (

@@ -1,11 +1,15 @@
 import express from 'express';
 import path from 'path';
-import routes from './routes';
 
 import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
+/* eslint */
+import webpackDevMiddleware from 'webpack-dev-middleware'; // eslint-disable-line
+import webpackHotMiddleware from 'webpack-hot-middleware'; // eslint-disable-line
+
+import routes from './routes';
+
 import config from '../webpack.config';
+
 console.log(config);
 const app = express();
 const compiler = webpack(config);
@@ -51,5 +55,7 @@ app.listen(port, 'localhost', (err) => {
   if (err) {
     console.log(err);
   }
-  console.info('🌎 Server fired up on %s. Open up http://localhost:%s/ in your browser.', port, port);
+  else {
+      console.info('🌎 Server fired up on %s. Open up http://localhost:%s/ in your browser.', port, port); // eslint-disable-line
+  }
 });

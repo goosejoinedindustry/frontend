@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import { BottomNavigation } from 'material-ui';
 
-require('./scss/footer.scss');
-
 export default class Footer extends React.Component {
 
   render() {

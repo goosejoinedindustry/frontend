@@ -15,7 +15,9 @@ export default class Bio extends Component {
     return (
       <div>
         <EditButton />
-        <div><img src={user.imageURL} height="100" width="100" /></div>
+        <div>
+          <img src={user.imageURL} height="100" width="100" />
+        </div>
         <h3>{user.name} </h3>
         <h5>{user.title} at {user.employed} in {user.city}, {user.state}</h5>
       </div>
