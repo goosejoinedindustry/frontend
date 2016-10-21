@@ -25,6 +25,7 @@ export default class VenueType extends Component {
     this.setState({ open: false });
     // console.log(item.props.value);
     console.log(obj, item.props.value);
+    this.props.updateFilter('venueType', item.props.value);
   }
   render() {
     return (

@@ -23,6 +23,7 @@ const data = [
 
 export const JOB_DATA = 'JOB_DATA';
 export function fetchJobs(filterBy) {
+  console.log(filterBy, 'filterBy');
   const request = data;
   return {
     type    : JOB_DATA,

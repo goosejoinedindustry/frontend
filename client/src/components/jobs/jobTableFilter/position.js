@@ -26,6 +26,7 @@ export default class Position extends Component {
   handleInputSubmit(a, b) {
     console.log(a);
     this.setState({ open: false });
+    this.props.updateFilter('position', a);
   }
   render() {
     return (

@@ -27,10 +27,12 @@ export default class City extends Component {
     this.setState({ open: false });
     // console.log(item.props.value);
     console.log(obj, item.props.value);
+    this.props.updateFilter('city', item.props.value);
   }
   handleInputSubmit(a, b) {
     console.log(a);
     this.setState({ open: false });
+    this.props.updateFilter('city', a);
   }
   render() {
     return (

@@ -24,6 +24,7 @@ export default class Zipcode extends Component {
   handleInputSubmit(a, b) {
     console.log(a);
     this.setState({ open: false });
+    this.props.updateFilter('zipcode', a);
   }
   render() {
     return (

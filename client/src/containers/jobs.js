@@ -14,7 +14,7 @@ class Jobs extends Component {
   render() {
     return (
       <div>
-        <JobTableFilter />
+        <JobTableFilter fetchJobs={this.props.fetchJobs} />
         <JobTable data={this.props.jobs} getJobs={this.getJobs.bind(this)} />
       </div>
     );
