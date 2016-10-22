@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
-import ResetButton from '../utility/resetButton';
+import { Card, CardHeader, CardText, CardActions, RaisedButton } from 'material-ui';
+import { connect } from 'react-redux';
 
-export default class ResetPassword extends Component {
+import { resetPassword } from '../settingAction';
+
+class ResetPassword extends Component {
   render() {
     return (
-      <div>
-        <h4> Reset Password </h4>
-        <p> A Message with a reset link will be sent to the email address associated with your account. </p>
-        <ResetButton />
-      </div>
+      <Card>
+        <CardHeader
+          title="Reset Password"
+        />
+        <CardText>
+         A Message with a reset link will be sent to the email address associated with your account.
+        </CardText>
+        <CardActions>
+          <RaisedButton
+            label={'Reset'}
+            primary
+            onClick={this.props.resetPassword}
+          />
+        </CardActions>
+      </Card>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    resetPassword: state.resetPassword
+  };
+}
+
+export default connect(mapStateToProps, {
+  resetPassword,
+})(ResetPassword);

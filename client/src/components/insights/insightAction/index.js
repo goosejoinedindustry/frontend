@@ -1,7 +1,7 @@
 export const DATA_LOAD = 'DATA_LOAD';
 
 
-export function viewGraphData(props) {
+export function viewGraphData() {
 // TODO : Remove hardcoded values
   return {
     type    : DATA_LOAD,

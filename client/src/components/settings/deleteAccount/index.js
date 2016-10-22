@@ -1,14 +1,76 @@
 import React, { Component } from 'react';
-import DeleteButton from '../utility/deleteButton';
+import { Card, CardHeader, CardText, CardActions, RaisedButton, Dialog, FlatButton } from 'material-ui';
+import { connect } from 'react-redux';
+import { deleteAccount } from '../settingAction';
 
-export default class DeleteAccount extends Component {
+class DeleteAccount extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false
+    };
+  }
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  handleDeleteAndClose = () => {
+    this.setState({ open: false });
+    this.props.deleteAccount();
+  }
+
   render() {
+    const actions = [
+      <FlatButton
+        label="Cancel"
+        primary
+        onTouchTap={this.handleClose}
+      />,
+      <FlatButton
+        label="Delete"
+        primary
+        onTouchTap={this.handleDeleteAndClose}
+      />,
+    ];
+
     return (
-      <div>
-        <h4> Delete Account </h4>
-        <p> This will deactivate your account. </p>
-        <DeleteButton />
-      </div>
+      <Card>
+        <CardHeader
+          title="Delete Account"
+        />
+        <CardText>
+         This will deactivate your account.
+        </CardText>
+        <CardActions>
+          <RaisedButton
+            label={'Delete'}
+            onTouchTap={this.handleOpen}
+          />
+        </CardActions>
+        <Dialog
+          actions={actions}
+          modal={false}
+          open={this.state.open}
+          onRequestClose={this.handleClose}
+        >
+          Are you sure?
+        </Dialog>
+      </Card>
     );
   }
 }
+function mapStateToProps(state) {
+  return {
+    deleteAccount: state.deleteAccount
+  };
+}
+export default connect(mapStateToProps, {
+  deleteAccount,
+})(DeleteAccount);

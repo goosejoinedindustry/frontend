@@ -7,7 +7,7 @@ import jobsReducer from '../components/jobs/jobsReducer';
 import appsReducer from '../components/applications/appReducer';
 import viewDataLoad from '../components/insights/insightsReducer';
 import sideBarToggle from '../components/shared/sharedReducer/sidebar';
-
+import settingsReducer from '../components/settings/settingsReducer';
 
 const rootReducer = combineReducers({
   form          : formReducer,
@@ -16,7 +16,8 @@ const rootReducer = combineReducers({
   jobsListing   : jobsReducer,
   appsListing   : appsReducer,
   viewGraphData : viewDataLoad,
-  sideBarToggle
+  sideBarToggle,
+  settingsReducer
 });
 
 export default rootReducer;

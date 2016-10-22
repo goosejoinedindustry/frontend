@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardMedia, CardTitle, CardText, RaisedButton } from 'material-ui';
+import { Card, CardText, RaisedButton } from 'material-ui';
 
 const viewProfileItem = () => {
   return (
