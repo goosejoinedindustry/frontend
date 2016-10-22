@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import ApplyNowButton from '../utility/applyNowButton';
-import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
+import { TableRow, TableRowColumn } from 'material-ui/Table';
 import RaisedButton from 'material-ui/RaisedButton';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 export default class JobTableRow extends Component {
   render() {
