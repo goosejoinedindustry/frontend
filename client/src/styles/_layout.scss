@@ -1,0 +1,3 @@
+body, :global(#root), :global(.flex-container), :global(.app-container), .page-container, .view-container, section > :global(.app-container) {
+  min-height: 100vh;
+}

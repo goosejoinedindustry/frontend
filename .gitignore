@@ -35,3 +35,22 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# webpack / babel
+/client/static/js
+
+bundle.js
+
+# Files sharing
+.floo
+.flooignore
+
+# Node Debug Logs
+server/views/npm-debug.log
+
+# environment setup
+.env
+
+# Linter
+.jshintignore
+.jshintrc

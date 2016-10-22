@@ -1,0 +1,21 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{"\u0040context":"http:\/\/schema.org","\u0040type":"WebSite","name":"Industry","url":"https:\/\/<%= url %>\/"}</script>
+<title> <%= title %> </title>
+<link rel="shortcut icon" href="/static/favicon.ico">
+<% ogTags.forEach(function(meta){
+  if(meta){%>
+  <%- include('./tags.ejs', {
+    key: meta.key,
+    tag: meta.tag,
+    prefix: 'og'
+  }) %>
+  <% }});
+  twitterTags.forEach(function(meta){
+    if(meta){ %>
+    <%- include('./tags.ejs', {
+      key: meta.key,
+      tag: meta.tag,
+      prefix: 'twitter'
+  }) %>
+<% }});%>

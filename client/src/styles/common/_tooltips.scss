@@ -1,0 +1,231 @@
+.helpTip, .helpTipLft, .verifiedTip{
+	position: absolute;
+  bottom: 6px;
+  right: 6px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: default;
+	border: 1px solid #D8D8D8;
+	overflow: visible !important;
+}
+
+.helpTipLft {
+  bottom: 0;
+  right: 0;
+}
+
+.helpTipMobileJobs {
+	position: absolute;
+	bottom: 0px;
+  right: 0px;
+	text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: default;
+	border: 1px solid #D8D8D8;
+	overflow: visible !important;
+
+  a span {
+    color: #fff!important;
+    font-size: 13px!important;
+  }
+
+  li {
+    text-transform: none;
+  }
+}
+
+.helpTip:before{
+	content:'?';
+	color:#f7931d;
+}
+
+.helpTip:hover p,
+.helpTipLft:hover p,
+.verifiedTip:hover p,
+.helpTipMobileJobs:hover p,
+.helpTipLft:hover a,
+.helpTipMobileJobs:hover a{
+	display:block;
+	transform-origin: 100% 0%;
+
+	-webkit-animation: fadeIn 0.3s ease-in-out;
+	animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.helpTip p,
+.helpTipLft p,
+.verifiedTip p,
+.helpTipMobileJobs p,
+.helpTipLft a,
+.helpTipMobileJobs a {	/* The tooltip */
+	display: none;
+	text-align: left !important;
+	background-color: #1E2021;
+	padding: 20px;
+	width: 300px;
+	position: absolute;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	right: -4px;
+	color: #FFF !important;
+	font-size: 13px;
+	line-height: 1.4;
+  z-index: 1;
+}
+
+.helpTip p:before,
+.helpTipLft p:before,
+.verifiedTip p:before,
+.helpTipMobileJobs p:before,
+.helpTipLft a:before,
+.helpTipMobileJobs a:before
+{ /* The pointer of the tooltip */
+	position: absolute;
+	content: '';
+	width:0;
+	height: 0;
+	border:6px solid transparent;
+	border-bottom-color:#1E2021;
+	right:10px;
+	top:-12px;
+}
+
+.helpTip p:after,
+.helpTipLft p:after,
+.verifiedTip p:after,
+.helpTipMobileJobs p:after,
+.helpTipLft a:after,
+.helpTipMobileJobs a:after{ /* Prevents the tooltip from being hidden */
+	width:100%;
+	height:40px;
+	content:'';
+	position: absolute;
+	top:-40px;
+	left:0;
+}
+
+/* Tooltip Left */
+
+.helpTipLft:before, .helpTipMobileJobs:before{
+	content:'';
+	color:transparent;
+}
+
+.helpTipLft p,
+.helpTipLft a
+{
+	right: -85px;
+	bottom: 26px;
+}
+
+.helpTipMobileJobs p,
+.helpTipMobileJobs a{
+	right: -155px;
+	bottom: 10px;
+}
+
+td .helpTipLft p,
+td .helpTipMobileJobs p{
+	right: 100%;
+	bottom: -50px;
+}
+
+td .helpTipLft a,
+td .helpTipMobileJobs a{
+  right: 100%;
+	bottom: -8px;
+}
+
+.helpTipLft p:before,
+.helpTipLft a:before{
+	border-top-color: #1e2021;
+	border-bottom-color: transparent;
+  right: 50%;
+  top: 100%;
+}
+
+.helpTipMobileJobs p:before
+.helpTipMobileJobs a:before {
+	border-top-color: #1e2021;
+	border-bottom-color: transparent;
+  right: 65%;
+  top: 100%;
+}
+
+ td .helpTipLft p:before,
+ td .helpTipMobileJobs p:before,
+ td .helpTipLft a:before,
+ td .helpTipMobileJobs a:before {
+	border-left-color: #1e2021;
+	border-top-color: transparent;
+  right: -12px;
+  top: 10px;
+}
+
+td .helpTipLft a:before,
+td .helpTipMobileJobs a:before{
+  top: 75%;
+
+}
+
+/* Verified Tip Override */
+
+.verifiedTip:before{
+	content: '\f058';
+	font-family: FontAwesome;
+	color: #f7931d;
+	font-size: 20px;
+  margin-left: 5px;
+}
+
+.verifiedTip{
+	position: relative;
+	bottom: 0;
+	right:0;
+	border: none;
+}
+
+.verifiedTip a:hover,
+.verifiedTip a:hover{
+	 color: #f7931d;
+}
+
+.verifiedTip p:before,
+.verifiedTip a:before{
+	right: 72px;
+}
+
+.verifiedTip p,
+.verifiedTip a {
+ width: 245px;
+ right: -70px;
+}
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity:0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity:100%;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:100%; }
+}

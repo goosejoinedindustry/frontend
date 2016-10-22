@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%-
+    include('./shared/metas.ejs', {
+      title: title,
+      url: url,
+      ogTags: ogTags
+    }) %>
+    <%- include('./shared/dependencies.ejs') %>
+  </head>
+  <%- include('./shared/body.ejs') %>
+</html>

@@ -1,0 +1,30 @@
+/*
+Application Settings Go Here
+------------------------------------
+This file acts as a bundler for all common/mixins/themes, so they
+can easily be swapped out without `core.scss` ever having to know.
+
+For example:
+
+@import './common/colors'
+@import './common/components'
+@import './themes/default'
+*/
+
+@import './common/colors';
+@import './common/components';
+@import './common/global';
+@import './common/fonts';
+@import './common/images';
+:global {
+  @import '~react-select/scss/default';
+  @import './common/select';
+}
+@import './layout';
+@import './common/overrides';
+
+// Vendors
+:global {
+  @import './vendor/react-photoswipe/photoswipe';
+}
+@import './grid.css';
