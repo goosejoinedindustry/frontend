@@ -5,7 +5,7 @@
   "main": "/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack server/config/webpack.config.js",
+    "build": "webpack --config server/config/webpack.config.js",
     "lint": "eslint *",
     "start": "webpack && babel-node server/server",
     "validate": "npm ls"
@@ -43,7 +43,8 @@
     "precommit-hook": "^3.0.0",
     "style-loader": "^0.13.1",
     "webpack-dev-middleware": "^1.8.4",
-    "webpack-hot-middleware": "^2.13.0"
+    "webpack-hot-middleware": "^2.13.0",
+    "webpack-validator": "^2.2.9"
   },
   "engines": {
     "node": "6.9.0"
@@ -64,6 +65,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "fbjs": "^0.8.5",
     "font-awesome": "^4.6.3",
+    "font-awesome-webpack": "0.0.4",
     "fs": "0.0.2",
     "google-react-maps": "^1.0.38",
     "history": "^4.3.0",

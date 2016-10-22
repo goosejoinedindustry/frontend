@@ -1,16 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const PATHS = {
+  entry : path.join(__dirname, '/client/index'),
+  build : path.join(__dirname, '/client/static/js/'),
+};
+
 module.exports = {
   context : __dirname,
   entry   : [
     // 'webpack-dev-server',
     // 'webpack-hot-middleware/client?reload=true',
     // 'webpack/hot/only-dev-server',
-    './client/index.js'
+    PATHS.entry
   ],
   output: {
-    path       : path.join(__dirname, 'client', 'static', 'js'),
+    path       : PATHS.build,
     publicPath : '/',
     filename   : 'bundle.js'
   },
@@ -59,12 +64,12 @@ module.exports = {
     reasons : true,
     chunks  : false
   },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('local')
-    })
-  ]
+  // plugins: [
+  //   new webpack.optimize.OccurenceOrderPlugin(),
+  //   new webpack.HotModuleReplacementPlugin(),
+  //   new webpack.NoErrorsPlugin(),
+  //   new webpack.DefinePlugin({
+  //     'process.env.NODE_ENV': JSON.stringify('local')
+  //   })
+  // ]
 };

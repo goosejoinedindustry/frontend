@@ -2,22 +2,19 @@ import express from 'express';
 import path from 'path';
 
 import webpack from 'webpack';
-/* eslint */
-import webpackDevMiddleware from 'webpack-dev-middleware'; // eslint-disable-line
-import webpackHotMiddleware from 'webpack-hot-middleware'; // eslint-disable-line
-
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import config from './config/webpack.config';
 import routes from './routes';
-
-import config from '../webpack.config';
-
-console.log(config);
 const app = express();
-const compiler = webpack(config);
+
+// console.log(compiler);
 
 // Set port depending on process.env
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 
+// app.use(require('font-awesome-webpack'));
 // Server side templating from ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
