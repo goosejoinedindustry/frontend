@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { RaisedButton, Card, CardHeader, CardText, CardActions } from 'material-ui';
 import BusinessSelector from '../utility/businessSelector';
 import UserSelector from '../utility/userSelector';
+import SearchBar from '../../shared/searchBar';
 
 import { addCompanyAdmin } from '../settingAction';
 
@@ -51,7 +52,7 @@ class AddCompanyAdmin extends Component {
             <BusinessSelector items={this.state.businesses} func={this.handleInputBus} />
           </section>
           <section>
-            <UserSelector items={users} func={this.handleInputUser} />
+            <SearchBar func={this.handleInputUser} hint={'Find a User'} />
           </section>
         </CardText>
         <CardActions>

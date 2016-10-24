@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
-
-import EditButton from '../utility/editButton';
+import { Card, CardText, CardTitle } from 'material-ui';
 
 export default class VideoResume extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      videoResume: props.data
+    };
+  }
+
   render() {
     return (
-      <div>
-        <EditButton />
-      </div>
+      <Card>
+        <CardTitle subtitle="VIDEO RESUME" />
+        <CardText>
+          {this.state.videoResume}
+        </CardText>
+      </Card>
     );
   }
 }

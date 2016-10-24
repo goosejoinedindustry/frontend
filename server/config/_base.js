@@ -20,7 +20,7 @@ const config = {
   // ----------------------------------
   server_host : 'localhost',
   server_port : process.env.PORT || 3000,
-  api_url     : 'localhost:1337',
+  api_url     : 'http://industry-api-dev.herokuapp.com/', // Dev
 
   // ----------------------------------
   // Compiler Configuration

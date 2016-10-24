@@ -8,6 +8,7 @@ import { sideBarToggle } from './sharedAction/sidebar';
 import InviteFriend from './utility/inviteFriends';
 import CreateBusiness from './utility/createBusiness';
 
+
 const chance = new Chance();
 
 class SideBar extends Component {
@@ -101,7 +102,6 @@ class SideBar extends Component {
       />
     );
   }
-
 
   render() {
     return (

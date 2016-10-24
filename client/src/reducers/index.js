@@ -8,6 +8,7 @@ import appsReducer from '../components/applications/appReducer';
 import viewDataLoad from '../components/insights/insightsReducer';
 import sideBarToggle from '../components/shared/sharedReducer/sidebar';
 import settingsReducer from '../components/settings/settingsReducer';
+import profileReducer from '../components/profile/profileReducer';
 
 const rootReducer = combineReducers({
   form          : formReducer,
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
   appsListing   : appsReducer,
   viewGraphData : viewDataLoad,
   sideBarToggle,
-  settingsReducer
+  settingsReducer,
+  profileReducer
 });
 
 export default rootReducer;

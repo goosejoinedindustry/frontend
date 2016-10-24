@@ -3,10 +3,12 @@ import historyApiFallback from 'connect-history-api-fallback';
 import url from 'url';
 import config from '../config';
 
+console.log(config.globals['process.env'].BASE_API_URL);
+
 export default (app) => {
   // Profile's Applications
   /** Forward to Heroku API **/
-  app.use(config.globals['process.env'].BASE_API_URL, proxy(`${config.api_url}`, {
+  app.use('/api', proxy(`${config.api_url}`, {
     decorateRequest(req) {
       req.headers.Accept = 'application/json';
       return req;

@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
+import { Paper } from 'material-ui';
 
 export default class Experience extends Component {
-  renderExpItems() {
-    return (
-      <div>
-        <h3>Experience</h3>
-        <ul>
-          {map(this.props.exp, (result) => {
-            return ([
-              <li>
-                <h3>{result.expTitle}</h3>
-                <div>
-                  <p>{result.expLocation}</p>
-                  <p>{result.expStart} - {result.expEnd}</p>
-                </div>
-              </li>
-            ]);
-          })}
-        </ul>
-      </div>
-    );
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: props.data || []
+    };
   }
+
   render() {
     return (
-      // going to be a list
-      this.renderExpItems()
+      <Paper
+        zDepth={0}
+      >
+        {map(this.state.data, (exp) => {
+          return ([
+            <div>
+              <h3>{exp.workTitle} | {exp.company}</h3>
+              <p>{exp.startDate} - {exp.endDate}</p>
+            </div>
+          ]);
+        })}
+      </Paper>
     );
   }
 }

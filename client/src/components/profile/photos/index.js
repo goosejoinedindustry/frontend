@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
-
-import PhotoItem from './utility/photoItem';
-import EditButton from '../utility/editButton';
+import { Card, CardTitle, CardText, Avatar } from 'material-ui';
 
 export default class Photos extends Component {
+
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      photos: props.data
+    };
+  }
+
+  renderPhotos() {
+    const photos = [];
+
+    this.state.photos.forEach((photo) => {
+      photos.push((
+        <CardText key={photo.photoId} > {photo.photoId} </CardText>
+        ));
+    });
+    return photos;
+  }
+
   render() {
     return (
         // List of photos
-      <div>
-        <EditButton />
-        <PhotoItem />
-      </div>
+      <Card>
+        <CardTitle subtitle="PHOTOS" />
+        {this.renderPhotos.bind(this)()}
+      </Card>
     );
   }
 }
