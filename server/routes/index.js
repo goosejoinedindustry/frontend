@@ -37,6 +37,7 @@ export default (app) => {
     console.log(`Route created: ${route}`);
     renderHelper(app, route, params, template);
   }
+  api(app);
   base(render);
   profile(render);
   insights(render);
@@ -45,5 +46,4 @@ export default (app) => {
   settings(render);
   licenses(render);
   businessJobPosting(render);
-  api(app);
 };

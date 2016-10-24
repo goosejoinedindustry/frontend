@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Paper } from 'material-ui';
 
 export default class BackgroundItem extends Component {
   static propTypes = {
@@ -9,7 +10,11 @@ export default class BackgroundItem extends Component {
   }
   render() {
     return (
-      <div />
+      <Paper
+        zDepth={0}
+      >
+      Yo
+      </Paper>
     );
   }
 }

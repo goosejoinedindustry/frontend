@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
+import { Paper } from 'material-ui';
 
 export default class Education extends Component {
-  renderExpItems() {
-    return (
-      <div>
-        <h3>Education</h3>
-        <ul>
-          {map(this.props.edu, (result) => {
-            return ([
-              <li>
-                <h3>{result.eduTitle}</h3>
-                <div>
-                  <p>{result.eduLocation}</p>
-                  <p>{result.eduStart} - {result.eduEnd}</p>
-                </div>
-              </li>
-            ]);
-          })}
-        </ul>
-      </div>
-    );
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: props.data || []
+    };
   }
+
   render() {
     return (
-      // going to be a list
-      this.renderExpItems()
+      <Paper
+        zDepth={0}
+      >
+        {map(this.state.data, (edu) => {
+          return ([
+            <div>
+              <h3>{edu.course} </h3>
+              <p>{edu.school}</p>
+              <p>{edu.level}</p>
+              <p>{edu.startDate} - {edu.endDate}</p>
+            </div>
+          ]);
+        })}
+      </Paper>
     );
   }
 }

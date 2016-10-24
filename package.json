@@ -91,6 +91,7 @@
     "recharts": "^0.15.2",
     "redux": "^3.6.0",
     "redux-form": "^6.1.1",
+    "redux-promise": "^0.5.3",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "superagent": "^2.3.0",
